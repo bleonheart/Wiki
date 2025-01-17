@@ -20,31 +20,31 @@ FACTION_MINECRAFTER = FACTION.index
 
 | **Variable**                                       | **Purpose**                                                                                             | **Type**                        | **Example**                                                                                                         |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `FACTION.name`                                     | The displayed name of your faction.                                                                     | `string`                        | `FACTION.name = "Minecrafters"`<br>*Sets the faction name to "Minecrafters."*                                       |
-| `FACTION.desc`                                     | The description or lore of your faction.                                                                | `string`                        | `FACTION.desc = "Surviving and crafting in the blocky world."`<br>*Provides a description for the faction.*         |
-| `FACTION.isDefault`                                | Marks the faction as default if set to `true`.                                                          | `bool`                          | `FACTION.isDefault = false`<br>*Sets the faction as not default.*                                                  |
+| `FACTION.name`                                     | The displayed name of your faction.                                                                     | `String`                        | `FACTION.name = "Minecrafters"`<br>*Sets the faction name to "Minecrafters."*                                       |
+| `FACTION.desc`                                     | The description or lore of your faction.                                                                | `String`                        | `FACTION.desc = "Surviving and crafting in the blocky world."`<br>*Provides a description for the faction.*         |
+| `FACTION.isDefault`                                | Marks the faction as default if set to `true`.                                                          | `Bool`                          | `FACTION.isDefault = false`<br>*Sets the faction as not default.*                                                  |
 | `FACTION.color` *(Optional)*                       | The color associated with the faction.                                                                  | `Color`                         | `FACTION.color = Color(0, 255, 0)`<br>*Sets the faction color to green.*                                           |
-| `FACTION.models`                                   | Models available to faction members.                                                                    | `table` of `string`             | `FACTION.models = {"minecraft_model_1.mdl", "minecraft_model_2.mdl", "minecraft_model_3.mdl"}`<br>*Assigns multiple models.* |
-| `FACTION.weapons` *(Optional)*                     | Weapons available to faction members.                                                                   | `table` of `string`             | `FACTION.weapons = {"stone_sword", "iron_pickaxe"}`<br>*Provides stone sword and iron pickaxe to faction members.*  |
-| `FACTION.pay` *(Optional)*                         | Payment amount for members of this faction.                                                             | `number`                        | `FACTION.pay = 50`<br>*Sets the pay rate to 50 units.*                                                              |
-| `FACTION.payLimit` *(Optional)*                    | Maximum amount of pay a member can accumulate.                                                          | `number`                        | `FACTION.payLimit = 1000`<br>*Limits the maximum pay a member can accumulate.*                                     |
-| `FACTION.payTimer` *(Optional)*                    | Interval (in seconds) for issuing pay.                                                                  | `number`                        | `FACTION.payTimer = 3600`<br>*Sets the pay interval to one hour.*                                                  |
-| `FACTION.limit` *(Optional)*                       | Maximum number of players allowed in this faction.                                                      | `number`                        | `FACTION.limit = 20`<br>*Limits the faction to 20 players.*                                                        |
-| `FACTION.oneCharOnly` *(Optional)*                 | Restricts players to a single character in this faction.                                                | `bool`                          | `FACTION.oneCharOnly = true`<br>*Prevents creating multiple characters in the same faction.*                       |
-| `FACTION.health` *(Optional)*                      | Default health for faction members.                                                                     | `number`                        | `FACTION.health = 150`<br>*Sets the default health to 150.*                                                        |
-| `FACTION.armor` *(Optional)*                       | Default armor for faction members.                                                                      | `number`                        | `FACTION.armor = 25`<br>*Sets the default armor to 25.*                                                            |
-| `FACTION.scale` *(Optional)*                       | Adjusts the player model’s size.                                                                        | `number`                        | `FACTION.scale = 1.1`<br>*Increases the player model size by 10%.*                                                 |
-| `FACTION.runSpeed` *(Optional)*                    | Default running speed for faction members.                                                              | `number`                        | `FACTION.runSpeed = 250`<br>*Sets the running speed to 250 units.*                                                 |
-| `FACTION.runSpeedMultiplier` *(Optional)*          | If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.                        | `bool`                          | `FACTION.runSpeedMultiplier = false`<br>*Sets the running speed directly.*                                         |
-| `FACTION.walkSpeed` *(Optional)*                   | Default walking speed for faction members.                                                              | `number`                        | `FACTION.walkSpeed = 200`<br>*Sets the walking speed to 200 units.*                                                |
-| `FACTION.walkSpeedMultiplier` *(Optional)*         | If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.                       | `bool`                          | `FACTION.walkSpeedMultiplier = true`<br>*Enables walk speed multiplication.*                                       |
-| `FACTION.jumpPower` *(Optional)*                   | Default jump power for faction members.                                                                 | `number`                        | `FACTION.jumpPower = 200`<br>*Sets the jump power to 200.*                                                         |
-| `FACTION.jumpPowerMultiplier` *(Optional)*         | If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.                  | `bool`                          | `FACTION.jumpPowerMultiplier = true`<br>*Enables jump power multiplication.*                                       |
-| `FACTION.MemberToMemberAutoRecognition` *(Optional)* | Determines if members automatically recognize each other.                                              | `bool`                          | `FACTION.MemberToMemberAutoRecognition = true`<br>*Members automatically recognize each other.*                    |
-| `FACTION.bloodcolor` *(Optional)*                  | Sets the blood color for faction members.                                                               | `number` (Enum)                 | `FACTION.bloodcolor = BLOOD_COLOR_RED`<br>*Sets the blood color to red.*                                           |
-| `FACTION.bodyGroups` *(Optional)*                  | Assigns bodygroup settings for faction members.                                                         | `table`                         | `FACTION.bodyGroups = {[1] = 2, [2] = 1}`<br>*Sets specific bodygroups for the faction model.*                     |
-| `FACTION.RecognizesGlobally` *(Optional)*          | If `true`, this faction recognizes all players globally.                                                | `bool`                          | `FACTION.RecognizesGlobally = false`<br>*Does not globally recognize all players.*                                 |
-| `FACTION.index`                                     | A unique ID identifying the faction, used for reference and indexing.                                   | `number`                        | `FACTION_MINECRAFTER = FACTION.index`<br>*Assigns a unique ID to the Minecrafter faction.*                         |
+| `FACTION.models`                                   | Models available to faction members.                                                                    | `Table` of `Strings`             | `FACTION.models = {"minecraft_model_1.mdl", "minecraft_model_2.mdl", "minecraft_model_3.mdl"}`<br>*Assigns multiple models.* |
+| `FACTION.weapons` *(Optional)*                     | Weapons available to faction members.                                                                   | `Table` of `Strings`             | `FACTION.weapons = {"stone_sword", "iron_pickaxe"}`<br>*Provides stone sword and iron pickaxe to faction members.*  |
+| `FACTION.pay` *(Optional)*                         | Payment amount for members of this faction.                                                             | `Number`                        | `FACTION.pay = 50`<br>*Sets the pay rate to 50 units.*                                                              |
+| `FACTION.payLimit` *(Optional)*                    | Maximum amount of pay a member can accumulate.                                                          | `Number`                        | `FACTION.payLimit = 1000`<br>*Limits the maximum pay a member can accumulate.*                                     |
+| `FACTION.payTimer` *(Optional)*                    | Interval (in seconds) for issuing pay.                                                                  | `Number`                        | `FACTION.payTimer = 3600`<br>*Sets the pay interval to one hour.*                                                  |
+| `FACTION.limit` *(Optional)*                       | Maximum number of players allowed in this faction.                                                      | `Number`                        | `FACTION.limit = 20`<br>*Limits the faction to 20 players.*                                                        |
+| `FACTION.oneCharOnly` *(Optional)*                 | Restricts players to a single character in this faction.                                                | `Bool`                          | `FACTION.oneCharOnly = true`<br>*Prevents creating multiple characters in the same faction.*                       |
+| `FACTION.health` *(Optional)*                      | Default health for faction members.                                                                     | `Number`                        | `FACTION.health = 150`<br>*Sets the default health to 150.*                                                        |
+| `FACTION.armor` *(Optional)*                       | Default armor for faction members.                                                                      | `Number`                        | `FACTION.armor = 25`<br>*Sets the default armor to 25.*                                                            |
+| `FACTION.scale` *(Optional)*                       | Adjusts the player model’s size.                                                                        | `Number`                        | `FACTION.scale = 1.1`<br>*Increases the player model size by 10%.*                                                 |
+| `FACTION.runSpeed` *(Optional)*                    | Default running speed for faction members.                                                              | `Number`                        | `FACTION.runSpeed = 250`<br>*Sets the running speed to 250 units.*                                                 |
+| `FACTION.runSpeedMultiplier` *(Optional)*          | If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.                        | `Bool`                          | `FACTION.runSpeedMultiplier = false`<br>*Sets the running speed directly.*                                         |
+| `FACTION.walkSpeed` *(Optional)*                   | Default walking speed for faction members.                                                              | `Number`                        | `FACTION.walkSpeed = 200`<br>*Sets the walking speed to 200 units.*                                                |
+| `FACTION.walkSpeedMultiplier` *(Optional)*         | If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.                       | `Bool`                          | `FACTION.walkSpeedMultiplier = true`<br>*Enables walk speed multiplication.*                                       |
+| `FACTION.jumpPower` *(Optional)*                   | Default jump power for faction members.                                                                 | `Number`                        | `FACTION.jumpPower = 200`<br>*Sets the jump power to 200.*                                                         |
+| `FACTION.jumpPowerMultiplier` *(Optional)*         | If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.                  | `Bool`                          | `FACTION.jumpPowerMultiplier = true`<br>*Enables jump power multiplication.*                                       |
+| `FACTION.MemberToMemberAutoRecognition` *(Optional)* | Determines if members automatically recognize each other.                                              | `Bool`                          | `FACTION.MemberToMemberAutoRecognition = true`<br>*Members automatically recognize each other.*                    |
+| `FACTION.bloodcolor` *(Optional)*                  | Sets the blood color for faction members.                                                               | `Number` (Enum)                 | `FACTION.bloodcolor = BLOOD_COLOR_RED`<br>*Sets the blood color to red.*                                           |
+| `FACTION.bodyGroups` *(Optional)*                  | Assigns bodygroup settings for faction members.                                                         | `Table`                         | `FACTION.bodyGroups = {[1] = 2, [2] = 1}`<br>*Sets specific bodygroups for the faction model.*                     |
+| `FACTION.RecognizesGlobally` *(Optional)*          | If `true`, this faction recognizes all players globally.                                                | `Bool`                          | `FACTION.RecognizesGlobally = false`<br>*Does not globally recognize all players.*                                 |
+| `FACTION.index`                                     | A unique ID identifying the faction, used for reference and indexing.                                   | `Number`                        | `FACTION_MINECRAFTER = FACTION.index`<br>*Assigns a unique ID to the Minecrafter faction.*                         |
 
 ---
 
@@ -59,7 +59,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   The displayed name of your faction.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -74,7 +74,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   The description or lore of your faction.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -89,7 +89,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Marks the faction as default if set to `true`.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -119,7 +119,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Models available to faction members.
 
 - **Type:**  
-  `table` of `string`
+  `Table` of `Strings`
 
 - **Example:**
   ```lua
@@ -134,7 +134,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Weapons available to faction members.
 
 - **Type:**  
-  `table` of `string`
+  `Table` of `Strings`
 
 - **Example:**
   ```lua
@@ -149,7 +149,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Payment amount for members of this faction.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -164,7 +164,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Maximum amount of pay a member can accumulate.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -179,7 +179,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Interval (in seconds) for issuing pay.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -194,7 +194,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Maximum number of players allowed in this faction.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -209,7 +209,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Restricts players to a single character in this faction.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -224,7 +224,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Default health for faction members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -239,7 +239,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Default armor for faction members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -254,7 +254,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Adjusts the player model’s size.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -269,7 +269,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Default running speed for faction members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -284,7 +284,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -299,7 +299,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Default walking speed for faction members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -314,7 +314,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -329,7 +329,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Default jump power for faction members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua
@@ -344,7 +344,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -359,7 +359,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Determines if members automatically recognize each other.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -374,7 +374,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Sets the blood color for faction members.
 
 - **Type:**  
-  `number` (Enum)
+  `Number` (Enum)
 
 - **Example:**
   ```lua
@@ -389,7 +389,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   Assigns bodygroup settings for faction members.
 
 - **Type:**  
-  `table`
+  `Table`
 
 - **Example:**
   ```lua
@@ -404,7 +404,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   If `true`, this faction recognizes all players globally.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -419,7 +419,7 @@ Below are more in-depth explanations of each **FACTION** variable, closely match
   A unique ID (faction index) identifying the faction.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
   ```lua

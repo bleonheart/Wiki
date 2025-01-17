@@ -16,11 +16,7 @@ Provides a human-readable string representation of the character.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -43,7 +39,7 @@ Compares this character with another character for equality based on their uniqu
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -72,11 +68,7 @@ Retrieves the unique database ID of this character.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -100,11 +92,7 @@ Obtains the player object that currently owns this character.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -129,7 +117,7 @@ Checks whether the character possesses at least a specified amount of in-game cu
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -160,11 +148,7 @@ Retrieves all flags associated with this character.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -190,11 +174,11 @@ Determines if the character has one or more specified flags.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **flags** (`string`): A string containing one or more flags to check.
+- **flags** (`String`): A string containing one or more flags to check.
 
 **Returns**
 
@@ -218,11 +202,7 @@ Retrieves the currently equipped weapon of the character along with its correspo
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -252,15 +232,11 @@ Sets the complete set of flags accessible by this character, replacing any exist
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **flags** (`string`): A string containing one or more flags to assign to the character.
-
-**Returns**
-
-None.
+- **flags** (`String`): A string containing one or more flags to assign to the character.
 
 **Example**
 
@@ -279,15 +255,11 @@ Adds one or more flags to the character's existing set of accessible flags witho
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **flags** (`string`): A string containing one or more flags to add.
-
-**Returns**
-
-None.
+- **flags** (`String`): A string containing one or more flags to add.
 
 **Example**
 
@@ -306,15 +278,11 @@ Removes one or more flags from the character's set of accessible flags.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **flags** (`string`): A string containing one or more flags to remove.
-
-**Returns**
-
-None.
+- **flags** (`String`): A string containing one or more flags to remove.
 
 **Example**
 
@@ -334,15 +302,11 @@ Persists the character's current state and data to the database.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **callback** (`function`, optional): An optional callback function to execute after the save operation completes successfully.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -367,16 +331,15 @@ This method handles different synchronization scenarios:
 
 **Realm**
 
-- **server**
-- **@internal**
+- **Server**
+
+**Internal:**  
+
+This function is intended for internal use and should not be called directly.
 
 **Parameters**
 
 - **receiver** (`Player|nil`): The specific player to send the character data to. If `nil`, data is sent to all players.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -384,9 +347,6 @@ None.
 character:sync()
 -- Syncs character data to all players
 ```
-
-*This function is internal and should only be used if you are absolutely certain about its implications.*
-
 ---
 
 ## **setup**
@@ -397,16 +357,15 @@ Configures the character's appearance and synchronizes this information with the
 
 **Realm**
 
-- **server**
-- **@internal**
+- **Server**
+
+**Internal:**  
+
+This function is intended for internal use and should not be called directly.
 
 **Parameters**
 
-- **noNetworking** (`bool`, optional): If set to `true`, the character's information will not be synchronized with other players.
-
-**Returns**
-
-None.
+- **noNetworking** (`Bool`, optional): If set to `true`, the character's information will not be synchronized with other players.
 
 **Example**
 
@@ -414,8 +373,6 @@ None.
 character:setup()
 -- Sets up the character and syncs data with the owning player
 ```
-
-*This function is internal and should only be used if you are absolutely certain about its implications.*
 
 ---
 
@@ -427,15 +384,7 @@ Forces the player to exit their current character and redirects them to the char
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -453,15 +402,11 @@ Bans the character, preventing it from being used for a specified duration or pe
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **time** (`float`, optional): The duration of the ban in seconds. If omitted or `nil`, the ban is permanent.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -480,15 +425,7 @@ Removes the character from the database and memory, effectively deleting it perm
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -506,15 +443,7 @@ Destroys the character instance, removing it from memory and ensuring it is no l
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -532,7 +461,7 @@ Adds or subtracts money from the character's wallet. This function adds money to
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -558,7 +487,7 @@ Specifically removes money from the character's wallet. This function ensures th
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 

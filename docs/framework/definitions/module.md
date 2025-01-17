@@ -35,16 +35,16 @@ MODULE.Dependencies = {
 
 | **Variable**                      | **Purpose**                                                            | **Type**                         | **Example**                                                                                  |
 |----------------------------------|------------------------------------------------------------------------|----------------------------------|----------------------------------------------------------------------------------------------|
-| `MODULE.name`                     | Identifies the module by name.                                         | `string`                         | `MODULE.name = "A Module"`<br>*Names the module “A Module.”*                                 |
-| `MODULE.author`                   | Specifies the module’s author (e.g., STEAMID64 or a name).             | `string`                         | `MODULE.author = "76561198312513285"`<br>*Sets the author’s SteamID64.*                      |
-| `MODULE.discord` *(Optional)*     | Provides the Discord handle of the author or support channel.          | `string`                         | `MODULE.discord = "@liliaplayer"`<br>*Displays the author’s Discord tag.*                    |
-| `MODULE.version` *(Optional)*     | Tracks the module’s version or release state.                          | `string`                         | `MODULE.version = "Stock"`<br>*Marks the module’s version as “Stock.”*                       |
-| `MODULE.desc`                     | Describes the module’s functionality or purpose.                       | `string`                         | `MODULE.desc = "This is an Example Module."`<br>*Gives a short overview of the module.*      |
-| `MODULE.identifier` *(Optional)*  | A unique identifier for external references to this module.            | `string`                         | `MODULE.identifier = "example_mod"`<br>*Helps in referencing the module externally.*         |
-| `MODULE.CAMIPrivileges` *(Optional)* | Defines CAMI permissions for the module.                             | `table`                          | See [CAMIPrivileges Details](#7-modulecamiprivileges-optional).                                      |
-| `MODULE.WorkshopContent` *(Optional)* | Lists Workshop add-on IDs required by the module.                   | `table` of `string`              | `MODULE.WorkshopContent = {"2959728255"}`<br>*Includes relevant Workshop items.*             |
-| `MODULE.enabled` *(Optional)*     | Toggles module activation.                                             | `bool`                           | `MODULE.enabled = true`<br>*Enables the module.*                                             |
-| `MODULE.Dependencies` *(Optional)*| Specifies files and realms this module depends on.                     | `table` of `table`               | See [Dependencies Details](#10-moduledependencies-optional).                                           |
+| `MODULE.name`                     | Identifies the module by name.                                         | `String`                         | `MODULE.name = "A Module"`<br>*Names the module “A Module.”*                                 |
+| `MODULE.author`                   | Specifies the module’s author (e.g., STEAMID64 or a name).             | `String`                         | `MODULE.author = "76561198312513285"`<br>*Sets the author’s SteamID64.*                      |
+| `MODULE.discord` *(Optional)*     | Provides the Discord handle of the author or support channel.          | `String`                         | `MODULE.discord = "@liliaplayer"`<br>*Displays the author’s Discord tag.*                    |
+| `MODULE.version` *(Optional)*     | Tracks the module’s version or release state.                          | `String`                         | `MODULE.version = "Stock"`<br>*Marks the module’s version as “Stock.”*                       |
+| `MODULE.desc`                     | Describes the module’s functionality or purpose.                       | `String`                         | `MODULE.desc = "This is an Example Module."`<br>*Gives a short overview of the module.*      |
+| `MODULE.identifier` *(Optional)*  | A unique identifier for external references to this module.            | `String`                         | `MODULE.identifier = "example_mod"`<br>*Helps in referencing the module externally.*         |
+| `MODULE.CAMIPrivileges` *(Optional)* | Defines CAMI permissions for the module.                             | `Table`                          | See [CAMIPrivileges Details](#7-modulecamiprivileges-optional).                                      |
+| `MODULE.WorkshopContent` *(Optional)* | Lists Workshop add-on IDs required by the module.                   | `Table` of `Strings`              | `MODULE.WorkshopContent = {"2959728255"}`<br>*Includes relevant Workshop items.*             |
+| `MODULE.enabled` *(Optional)*     | Toggles module activation.                                             | `Bool`                           | `MODULE.enabled = true`<br>*Enables the module.*                                             |
+| `MODULE.Dependencies` *(Optional)*| Specifies files and realms this module depends on.                     | `Table` of `Table`               | See [Dependencies Details](#10-moduledependencies-optional).                                           |
 
 ---
 
@@ -55,7 +55,7 @@ MODULE.Dependencies = {
   Names the module and is used for identification in logs or load orders.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -70,7 +70,7 @@ MODULE.Dependencies = {
   Specifies the module’s author (e.g., STEAMID64 or a name).
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -85,7 +85,7 @@ MODULE.Dependencies = {
   Provides a Discord handle or server invite for support or communication.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -100,7 +100,7 @@ MODULE.Dependencies = {
   Tracks the module’s version or release state.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -115,7 +115,7 @@ MODULE.Dependencies = {
   Describes the module’s functionality or purpose.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -130,7 +130,7 @@ MODULE.Dependencies = {
   A unique identifier for external references to this module.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -146,7 +146,7 @@ MODULE.Dependencies = {
   Each privilege can have keys like `Name`, `MinAccess`, and `Description`.
 
 - **Type:**  
-  `table`
+  `Table`
 
 - **Example:**
   ```lua
@@ -167,7 +167,7 @@ MODULE.Dependencies = {
   Lists Workshop add-on IDs required by the module, enabling automatic downloading if your server or client references them.
 
 - **Type:**  
-  `table` of `string`
+  `Table` of `Strings`
 
 - **Example:**
   ```lua
@@ -182,7 +182,7 @@ MODULE.Dependencies = {
   Toggles module activation. If `false`, the module may not load or function.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
   ```lua
@@ -197,7 +197,7 @@ MODULE.Dependencies = {
   Specifies additional files or libraries needed by this module, along with where (client or server) they should load.
 
 - **Type:**  
-  `table` of `table`
+  `Table` of `Table`
 
 - **Example:**
   ```lua
@@ -222,47 +222,47 @@ When you place standard named files or folders in your module’s directory, man
 
 ### **Files**  
 1. **`client.lua`**  
-   - Runs exclusively on the client side. Typically includes UI logic or client-specific features (HUD, VGUI, etc.).
+   - Runs exclusively on the clients. Usually used for shorter modules.
 
 2. **`server.lua`**  
-   - Runs exclusively on the server. Contains server-side logic for gameplay, data handling, or admin commands.
+   - Runs exclusively on the server. Usually used for shorter modules.
 
 3. **`config.lua`**  
-   - Stores configuration variables shared across the module. Can apply to both client and server if included properly.
+   - Stores configuration variables shared across the module. This file is shared between the server and client.
 
 4. **`commands.lua`**  
-   - Contains command definitions (chat or console), often used for administrative actions or gameplay-related commands.
+   - Contains command definitions. This file is shared between the server and client.
 
 ### **Folders**
 
 1. **`config`**  
-   - Houses additional configuration files or specialized config scripts. Useful for adjusting settings without modifying core code.
+   Stores configuration files for customizing addon settings without modifying core scripts.
 
 2. **`dependencies`**  
-   - Stores external libraries or resources that the module relies on. These might be internal scripts or third-party utilities.
+   Contains essential libraries or resources that must load before other scripts.
 
 3. **`libs`**  
-   - Contains generic utility scripts or libraries used throughout the addon (not tied to a specific feature).
+   Includes utility scripts or global helper functions used across the addon.
 
 4. **`hooks`**  
-   - Organizes scripts that register and manage hooks (events triggered by the game engine or framework).
+   Houses scripts to register and manage Garry's Mod or custom hooks.
 
 5. **`libraries`**  
-   - Similar to `libs` but often for more extensive or standalone systems. Each “library” can represent a significant subsystem.
+   Contains standalone systems or major subsystems for the addon.
 
 6. **`commands`**  
-   - Houses scripts defining custom chat or console commands relevant to the addon.
+   Defines custom chat (`/command`) or console commands.
 
 7. **`netcalls`**  
-   - Manages network messaging between client and server (using Garry’s Mod’s `net` library).
+   Manages client-server communication using the `net` library.
 
 8. **`meta`**  
-   - Contains scripts that modify or extend metatables (e.g., adding functions to player or entity objects).
+   Extends or modifies metatables for core objects like `Player` or `Entity`.
 
 9. **`derma`**  
-   - Responsible for VGUI (Visual GUI) elements. Scripts here typically create panels, menus, or HUD elements.
+   Creates visual GUI elements like panels, menus, or HUDs.
 
 10. **`pim`**  
-    - Focuses on the “Player Interaction Menu” system. Scripts here define actions and menus for player-to-player or player-to-entity interactions.
-
+    Focuses on Player Interaction Menu definitions and actions.
+    
 ---

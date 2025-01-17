@@ -6,22 +6,22 @@ Below is a comprehensive list of global functions and properties used to define 
 
 | **Function/Property**        | **Purpose**                                                                                  | **Type**    | **Example**                                           |
 |------------------------------|----------------------------------------------------------------------------------------------|-------------|-------------------------------------------------------|
-| `ITEM.name`                  | Sets the name of the item.                                                                   | `string`    | `ITEM.name = "Radio Antenna"`                         |
-| `ITEM.model`                 | Specifies the 3D model used for the item.                                                    | `string`    | `ITEM.model = "models/props_lab/antenna.mdl"`         |
-| `ITEM.desc`                  | Provides a short description of the item.                                                    | `string`    | `ITEM.desc = "A deployable radio antenna."`           |
-| `ITEM.category`              | Groups the item into a specific category.                                                    | `string`    | `ITEM.category = "Electronics"`                       |
-| `ITEM.width` & `ITEM.height` | Define the size of the item in the inventory grid.                                           | `number`    | `ITEM.width = 2`, `ITEM.height = 1`                   |
-| `ITEM.price`                 | Sets the item's price for trading or selling.                                               | `number`    | `ITEM.price = 100`                                     |
-| `ITEM.VManipDisabled`        | Disables VManip grabbing functionality for the item.                                       | `bool`      | `ITEM.VManipDisabled = true`                           |
-| `ITEM.uniqueID`              | Overrides the default unique ID, usually derived from the file name.                        | `string`    | `ITEM.uniqueID = "custom_unique_id"`                   |
-| `ITEM.SteamIDWhitelist`      | Specifies a whitelist of Steam IDs allowed to interact with the item in vendors.            | `table`     | `ITEM.SteamIDWhitelist = {"STEAM_0:1:12345678"}`       |
-| `ITEM.FactionWhitelist`      | Specifies a whitelist of factions allowed to interact with the item in vendors.             | `table`     | `ITEM.FactionWhitelist = {FACTION_CITIZEN, FACTION_POLICE}` |
-| `ITEM.UsergroupWhitelist`    | Specifies a whitelist of user groups allowed to interact with the item in vendors.          | `table`     | `ITEM.UsergroupWhitelist = {"admin", "moderator"}`    |
-| `ITEM.VIPWhitelist`          | Specifies whether the item is restricted to VIP players.                                   | `bool`      | `ITEM.VIPWhitelist = true`                             |
-| `ITEM.rarity`                | Specifies the rarity level of the item, determining its color in vendor displays.           | `string`    | `ITEM.rarity = "Legendary"`                            |
-| `ITEM.RequiredSkillLevels`   | Specifies the required skill levels to use the item.                                       | `table`     | `ITEM.RequiredSkillLevels = {Survival = 5}`            |
-| `ITEM.flag`                  | Specifies the necessary flag to buy an item.                                               | `string`    | `ITEM.flag = "Y"`                                       |
-| `ITEM.DropOnDeath`           | Deletes the item upon the player's death.                                                  | `bool`      | `ITEM.DropOnDeath = true`                               |
+| `ITEM.name`                  | Sets the name of the item.                                                                   | `String`    | `ITEM.name = "Radio Antenna"`                         |
+| `ITEM.model`                 | Specifies the 3D model used for the item.                                                    | `String`    | `ITEM.model = "models/props_lab/antenna.mdl"`         |
+| `ITEM.desc`                  | Provides a short description of the item.                                                    | `String`    | `ITEM.desc = "A deployable radio antenna."`           |
+| `ITEM.category`              | Groups the item into a specific category.                                                    | `String`    | `ITEM.category = "Electronics"`                       |
+| `ITEM.width` & `ITEM.height` | Define the size of the item in the inventory grid.                                           | `Number`    | `ITEM.width = 2`, `ITEM.height = 1`                   |
+| `ITEM.price`                 | Sets the item's price for trading or selling.                                               | `Number`    | `ITEM.price = 100`                                     |
+| `ITEM.VManipDisabled`        | Disables VManip grabbing functionality for the item.                                       | `Bool`      | `ITEM.VManipDisabled = true`                           |
+| `ITEM.uniqueID`              | Overrides the default unique ID, usually derived from the file name.                        | `String`    | `ITEM.uniqueID = "custom_unique_id"`                   |
+| `ITEM.SteamIDWhitelist`      | Specifies a whitelist of Steam IDs allowed to interact with the item in vendors.            | `Table`     | `ITEM.SteamIDWhitelist = {"STEAM_0:1:12345678"}`       |
+| `ITEM.FactionWhitelist`      | Specifies a whitelist of factions allowed to interact with the item in vendors.             | `Table`     | `ITEM.FactionWhitelist = {FACTION_CITIZEN, FACTION_POLICE}` |
+| `ITEM.UsergroupWhitelist`    | Specifies a whitelist of user groups allowed to interact with the item in vendors.          | `Table`     | `ITEM.UsergroupWhitelist = {"admin", "moderator"}`    |
+| `ITEM.VIPWhitelist`          | Specifies whether the item is restricted to VIP players.                                   | `Bool`      | `ITEM.VIPWhitelist = true`                             |
+| `ITEM.rarity`                | Specifies the rarity level of the item, determining its color in vendor displays.           | `String`    | `ITEM.rarity = "Legendary"`                            |
+| `ITEM.RequiredSkillLevels`   | Specifies the required skill levels to use the item.                                       | `Table`     | `ITEM.RequiredSkillLevels = {Survival = 5}`            |
+| `ITEM.flag`                  | Specifies the necessary flag to buy an item.                                               | `String`    | `ITEM.flag = "Y"`                                       |
+| `ITEM.DropOnDeath`           | Deletes the item upon the player's death.                                                  | `Bool`      | `ITEM.DropOnDeath = true`                               |
 
 ---
 

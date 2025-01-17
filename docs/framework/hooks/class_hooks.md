@@ -37,6 +37,10 @@ end
 
 Triggered when a player leaves the current class and joins a different one. This hook allows you to perform actions such as resetting models or other class-specific attributes when a player exits a class.
 
+**Realm**
+
+- `Server`
+
 **Parameters**
 
 - **client** (`Player`): The player who has left the class.
@@ -61,6 +65,10 @@ end
 
 Called when a player successfully joins a class. Use this hook to initialize class-specific settings, such as setting the player's model or other attributes upon joining.
 
+**Realm**
+
+- `Server`
+
 **Parameters**
 
 - **client** (`Player`): The player who has joined the class.
@@ -83,6 +91,10 @@ end
 **Description**
 
 Invoked when a player in the class spawns into the world. This hook is useful for setting spawn-specific attributes like health, weapons, or other spawn-related properties.
+
+**Realm**
+
+- `Server`
 
 **Parameters**
 

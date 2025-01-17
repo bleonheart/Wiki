@@ -39,10 +39,10 @@ lia.command.add("charsetskin", {
 |--------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------|
 | `adminOnly` *(Optional)*            | If `true`, restricts the command to administrators only.                                                            | `bool`           | `adminOnly = true`<br>*Only admins can run this command.*                                                          |
 | `superAdminOnly` *(Optional)*       | If `true`, restricts the command to super administrators only.                                                     | `bool`           | `superAdminOnly = false`<br>*Admins or any user with the correct privilege can use the command.*                   |
-| `privilege`                          | Specifies the permission level or “privilege” required to use the command.                                         | `string`         | `privilege = "Manage Character Stats"`<br>*Users must have the "Manage Character Stats" privilege.*                |
-| `syntax` *(Optional)*               | Describes the expected argument format.                                                                             | `string`         | `syntax = "[string name] [number skin]"`<br>*Indicates the command expects a player name and a skin number.*       |
-| `AdminStick` *(Optional)*           | Stores extra metadata for admin interfaces (e.g., a GUI or categorization).                                         | `table`          | See [AdminStick Details](#5-adminstick-optional) below for a breakdown.                                                     |
-| `onRun`                              | The core logic or “payload” of the command, executed when the command is called.                                   | `function`       | See [onRun Example](#6-onrun) below.                                                                               |
+| `privilege`                          | Specifies the permission level or “privilege” required to use the command.                                         | `String`         | `privilege = "Manage Character Stats"`<br>*Users must have the "Manage Character Stats" privilege.*                |
+| `syntax` *(Optional)*               | Describes the expected argument format.                                                                             | `String`         | `syntax = "[string name] [number skin]"`<br>*Indicates the command expects a player name and a skin number.*       |
+| `AdminStick` *(Optional)*           | Stores extra metadata for admin interfaces (e.g., a GUI or categorization).                                         | `Table`          | See [AdminStick Details](#5-adminstick-optional) below for a breakdown.                                                     |
+| `onRun`                              | The core logic or “payload” of the command, executed when the command is called.                                   | `Function`       | See [onRun Example](#6-onrun) below.                                                                               |
 
 ---
 
@@ -84,7 +84,7 @@ lia.command.add("charsetskin", {
   This can be tied into your permission system to group and manage commands collectively under a single permission name.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -99,7 +99,7 @@ lia.command.add("charsetskin", {
   Provides a reference for how to structure the command’s arguments.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
   ```lua
@@ -119,7 +119,7 @@ lia.command.add("charsetskin", {
   - `ExtraFields`: Additional data fields and their types (e.g., `["skin"] = "number"`).
 
 - **Type:**  
-  `table`
+  `Table`
 
 - **Example:**
   ```lua
@@ -142,7 +142,7 @@ lia.command.add("charsetskin", {
   Contains the main logic of the command. Executes every time the command is used.
 
 - **Type:**  
-  `function`
+  `Function`
 
 - **Example:**
   ```lua

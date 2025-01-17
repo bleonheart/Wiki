@@ -9,17 +9,14 @@ This page details the various hooks associated with a **Faction** in your schema
 - **Description:**  
   Retrieves the default name for a character upon initial creation within the faction.
 
-- **Type:**  
-  `function`
-
 - **Realm:**  
-  `shared`
+  `Shared`
 
 - **Parameters:**
   - `client` (`Player`): The client for whom the default name is being retrieved.
 
 - **Returns:**  
-  `string`: The default name for the newly created character.
+  `String`: The default name for the newly created character.
 
 - **Usage Example:**
   ```lua
@@ -35,18 +32,16 @@ This page details the various hooks associated with a **Faction** in your schema
 - **Description:**  
   Retrieves the default description for a character upon initial creation within the faction.
 
-- **Type:**  
-  `function`
-
 - **Realm:**  
-  `shared`
+  `Shared`
 
 - **Parameters:**
   - `client` (`Player`): The client for whom the default description is being retrieved.
-  - `faction` (`number`): The faction ID for which the default description is being retrieved.
+
+  - `faction` (`Number`): The faction ID for which the default description is being retrieved.
 
 - **Returns:**  
-  `string`: The default description for the newly created character.
+  `String`: The default description for the newly created character.
 
 - **Usage Example:**
   ```lua
@@ -62,14 +57,12 @@ This page details the various hooks associated with a **Faction** in your schema
 - **Description:**  
   Executes actions when a character is created and assigned to the faction. Typically used to initialize character-specific data or inventory.
 
-- **Type:**  
-  `function`
-
 - **Realm:**  
-  `server`
+- `Server`
 
 - **Parameters:**
   - `client` (`Player`): The client that owns the character.
+  
   - `character` (`Character`): The character that has been created.
 
 - **Usage Example:**
@@ -87,11 +80,8 @@ This page details the various hooks associated with a **Faction** in your schema
 - **Description:**  
   Executes actions when a faction member spawns in the game world. Useful for setting up player-specific settings or notifications.
 
-- **Type:**  
-  `function`
-
 - **Realm:**  
-  `server`
+  `Server`
 
 - **Parameters:**
   - `client` (`Player`): The player that has just spawned.
@@ -110,11 +100,8 @@ This page details the various hooks associated with a **Faction** in your schema
 - **Description:**  
   Executes actions when a character is transferred to the faction. This can include changing the character's model or updating faction-specific attributes.
 
-- **Type:**  
-  `function`
-
 - **Realm:**  
-  `server`
+  `Server`
 
 - **Parameters:**
   - `character` (`Character`): The character that was transferred.

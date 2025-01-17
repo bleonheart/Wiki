@@ -20,30 +20,30 @@ CLASS.index = CLASS_STEVE
 
 | **Variable**                           | **Purpose**                                                                                                      | **Type**                       | **Example**                                                                                          |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------|------------------------------------------------------------------------------------------------------|
-| `CLASS.name`                           | The displayed name of the class.                                                                                | `string`                       | `CLASS.name = "Steve"`<br>*Sets the class name to "Steve."*                                           |
-| `CLASS.desc`                           | The description or lore of the class.                                                                            | `string`                       | `CLASS.desc = "The Steves of the Minecrafter Faction."`<br>*Provides a description for the class.*     |
-| `CLASS.isDefault`                      | Determines if the class is available by default.                                                                 | `bool`                         | `CLASS.isDefault = true`<br>*Sets the class as available by default.*                                |
-| `CLASS.isWhitelisted` *(Optional)*     | Indicates if the class requires whitelisting.                                                                    | `bool`                         | `CLASS.isWhitelisted = false`<br>*If `true`, the class requires players to be whitelisted.*            |
-| `CLASS.faction`                        | Links the class to a specific faction.                                                                            | `number` (Faction Index)       | `CLASS.faction = FACTION_MINECRAFTER`<br>*Associates the class with the Minecrafter faction.*          |
+| `CLASS.name`                           | The displayed name of the class.                                                                                | `String`                       | `CLASS.name = "Steve"`<br>*Sets the class name to "Steve."*                                           |
+| `CLASS.desc`                           | The description or lore of the class.                                                                            | `String`                       | `CLASS.desc = "The Steves of the Minecrafter Faction."`<br>*Provides a description for the class.*     |
+| `CLASS.isDefault`                      | Determines if the class is available by default.                                                                 | `Bool`                         | `CLASS.isDefault = true`<br>*Sets the class as available by default.*                                |
+| `CLASS.isWhitelisted` *(Optional)*     | Indicates if the class requires whitelisting.                                                                    | `Bool`                         | `CLASS.isWhitelisted = false`<br>*If `true`, the class requires players to be whitelisted.*            |
+| `CLASS.faction`                        | Links the class to a specific faction.                                                                            | `Number` (Faction Index)       | `CLASS.faction = FACTION_MINECRAFTER`<br>*Associates the class with the Minecrafter faction.*          |
 | `CLASS.color` *(Optional)*             | The color associated with the class.                                                                             | `Color`                        | `CLASS.color = Color(0, 255, 0)`<br>*Sets the class color to green.*                                   |
-| `CLASS.weapons` *(Optional)*           | Weapons available to class members.                                                                              | `table` of `string`            | `CLASS.weapons = {"gold_pickaxe", "netherite_spade"}`<br>*Assigns specific weapons to the class.*        |
-| `CLASS.pay` *(Optional)*               | Payment amount for class members.                                                                                | `number`                       | `CLASS.pay = 50`<br>*Sets the pay rate to 50 units.*                                                 |
-| `CLASS.payLimit` *(Optional)*          | Maximum accumulated pay.                                                                                         | `number`                       | `CLASS.payLimit = 1000`<br>*Limits the maximum pay a member can accumulate.*                          |
-| `CLASS.payTimer` *(Optional)*          | Interval (in seconds) for issuing pay.                                                                          | `number`                       | `CLASS.payTimer = 3600`<br>*Sets the pay interval to one hour.*                                       |
-| `CLASS.limit` *(Optional)*             | Maximum number of players allowed in the class.                                                                    | `number`                       | `CLASS.limit = 10`<br>*Limits the class to 10 players.*                                               |
-| `CLASS.health` *(Optional)*            | Default health for class members.                                                                                  | `number`                       | `CLASS.health = 150`<br>*Sets the default health to 150.*                                             |
-| `CLASS.armor` *(Optional)*             | Default armor for class members.                                                                                   | `number`                       | `CLASS.armor = 50`<br>*Sets the default armor to 50.*                                                 |
-| `CLASS.scale` *(Optional)*             | Adjusts the player model’s size.                                                                                   | `number`                       | `CLASS.scale = 1.2`<br>*Increases the player model size by 20%.*                                        |
-| `CLASS.runSpeed` *(Optional)*          | Default running speed for class members.                                                                          | `number`                       | `CLASS.runSpeed = 250`<br>*Sets the running speed to 250 units.*                                      |
-| `CLASS.runSpeedMultiplier` *(Optional)*| If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.                                 | `bool`                         | `CLASS.runSpeedMultiplier = true`<br>*Enables run speed multiplication.*                             |
-| `CLASS.walkSpeed` *(Optional)*         | Default walking speed for class members.                                                                          | `number`                       | `CLASS.walkSpeed = 200`<br>*Sets the walking speed to 200 units.*                                      |
-| `CLASS.walkSpeedMultiplier` *(Optional)*| If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.                                | `bool`                         | `CLASS.walkSpeedMultiplier = false`<br>*Sets walk speed directly without multiplication.*             |
-| `CLASS.jumpPower` *(Optional)*         | Default jump power for class members.                                                                             | `number`                       | `CLASS.jumpPower = 200`<br>*Sets the jump power to 200.*                                               |
-| `CLASS.jumpPowerMultiplier` *(Optional)*| If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.                            | `bool`                         | `CLASS.jumpPowerMultiplier = true`<br>*Enables jump power multiplication.*                            |
-| `CLASS.bloodcolor` *(Optional)*        | Sets the blood color for class members.                                                                           | `number`                       | `CLASS.bloodcolor = BLOOD_COLOR_RED`<br>*Sets the blood color to red.*                                  |
-| `CLASS.bodyGroups` *(Optional)*        | Assigns bodygroup values on spawn.                                                                                  | `table`                        | `CLASS.bodyGroups = { [1] = 2, [3] = 1 }`<br>*Sets specific bodygroups for the class model.*             |
-| `CLASS.model` *(Optional)*             | Model(s) assigned to the class.                                                                                     | `string` or `table` of `string`| `CLASS.model = "models/player/steve.mdl"`<br>*Assigns a single model to the class.*<br><br>`CLASS.model = {"models/player/steve1.mdl", "models/player/steve2.mdl"}`<br>*Assigns multiple models to the class.* |
-| `CLASS.index`                           | A unique ID (team index) identifying the class.                                                                    | `number`                       | `CLASS.index = CLASS_STEVE`<br>*Assigns a unique team index to the class.*                              |
+| `CLASS.weapons` *(Optional)*           | Weapons available to class members.                                                                              | `Table` of `Strings`            | `CLASS.weapons = {"gold_pickaxe", "netherite_spade"}`<br>*Assigns specific weapons to the class.*        |
+| `CLASS.pay` *(Optional)*               | Payment amount for class members.                                                                                | `Number`                       | `CLASS.pay = 50`<br>*Sets the pay rate to 50 units.*                                                 |
+| `CLASS.payLimit` *(Optional)*          | Maximum accumulated pay.                                                                                         | `Number`                       | `CLASS.payLimit = 1000`<br>*Limits the maximum pay a member can accumulate.*                          |
+| `CLASS.payTimer` *(Optional)*          | Interval (in seconds) for issuing pay.                                                                          | `Number`                       | `CLASS.payTimer = 3600`<br>*Sets the pay interval to one hour.*                                       |
+| `CLASS.limit` *(Optional)*             | Maximum number of players allowed in the class.                                                                    | `Number`                       | `CLASS.limit = 10`<br>*Limits the class to 10 players.*                                               |
+| `CLASS.health` *(Optional)*            | Default health for class members.                                                                                  | `Number`                       | `CLASS.health = 150`<br>*Sets the default health to 150.*                                             |
+| `CLASS.armor` *(Optional)*             | Default armor for class members.                                                                                   | `Number`                       | `CLASS.armor = 50`<br>*Sets the default armor to 50.*                                                 |
+| `CLASS.scale` *(Optional)*             | Adjusts the player model’s size.                                                                                   | `Number`                       | `CLASS.scale = 1.2`<br>*Increases the player model size by 20%.*                                        |
+| `CLASS.runSpeed` *(Optional)*          | Default running speed for class members.                                                                          | `Number`                       | `CLASS.runSpeed = 250`<br>*Sets the running speed to 250 units.*                                      |
+| `CLASS.runSpeedMultiplier` *(Optional)*| If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.                                 | `Bool`                         | `CLASS.runSpeedMultiplier = true`<br>*Enables run speed multiplication.*                             |
+| `CLASS.walkSpeed` *(Optional)*         | Default walking speed for class members.                                                                          | `Number`                       | `CLASS.walkSpeed = 200`<br>*Sets the walking speed to 200 units.*                                      |
+| `CLASS.walkSpeedMultiplier` *(Optional)*| If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.                                | `Bool`                         | `CLASS.walkSpeedMultiplier = false`<br>*Sets walk speed directly without multiplication.*             |
+| `CLASS.jumpPower` *(Optional)*         | Default jump power for class members.                                                                             | `Number`                       | `CLASS.jumpPower = 200`<br>*Sets the jump power to 200.*                                               |
+| `CLASS.jumpPowerMultiplier` *(Optional)*| If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.                            | `Bool`                         | `CLASS.jumpPowerMultiplier = true`<br>*Enables jump power multiplication.*                            |
+| `CLASS.bloodcolor` *(Optional)*        | Sets the blood color for class members.                                                                           | `Number`                       | `CLASS.bloodcolor = BLOOD_COLOR_RED`<br>*Sets the blood color to red.*                                  |
+| `CLASS.bodyGroups` *(Optional)*        | Assigns bodygroup values on spawn.                                                                                  | `Table`                        | `CLASS.bodyGroups = { [1] = 2, [3] = 1 }`<br>*Sets specific bodygroups for the class model.*             |
+| `CLASS.model` *(Optional)*             | Model(s) assigned to the class.                                                                                     | `String` or `Table` of `Strings`| `CLASS.model = "models/player/steve.mdl"`<br>*Assigns a single model to the class.*<br><br>`CLASS.model = {"models/player/steve1.mdl", "models/player/steve2.mdl"}`<br>*Assigns multiple models to the class.* |
+| `CLASS.index`                           | A unique ID (team index) identifying the class.                                                                    | `Number`                       | `CLASS.index = CLASS_STEVE`<br>*Assigns a unique team index to the class.*                              |
 
 ---
 
@@ -55,7 +55,7 @@ CLASS.index = CLASS_STEVE
   The displayed name of the class.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
     ```lua
@@ -71,7 +71,7 @@ CLASS.index = CLASS_STEVE
   The description or lore of the class.
 
 - **Type:**  
-  `string`
+  `String`
 
 - **Example:**
     ```lua
@@ -87,7 +87,7 @@ CLASS.index = CLASS_STEVE
   Determines if the class is available by default.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
     ```lua
@@ -103,7 +103,7 @@ CLASS.index = CLASS_STEVE
   Indicates if the class requires whitelisting.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
     ```lua
@@ -119,7 +119,7 @@ CLASS.index = CLASS_STEVE
   Links the class to a specific faction.
 
 - **Type:**  
-  `number` (Faction Index)
+  `Number` (Faction Index)
 
 - **Example:**
     ```lua
@@ -151,7 +151,7 @@ CLASS.index = CLASS_STEVE
   Weapons available to class members.
 
 - **Type:**  
-  `table` of `string`
+  `Table` of `Strings`
 
 - **Example:**
     ```lua
@@ -167,7 +167,7 @@ CLASS.index = CLASS_STEVE
   Payment amount for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -183,7 +183,7 @@ CLASS.index = CLASS_STEVE
   Maximum accumulated pay.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -199,7 +199,7 @@ CLASS.index = CLASS_STEVE
   Interval (in seconds) for issuing pay.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -215,7 +215,7 @@ CLASS.index = CLASS_STEVE
   Maximum number of players allowed in the class.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -231,7 +231,7 @@ CLASS.index = CLASS_STEVE
   Default health for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -247,7 +247,7 @@ CLASS.index = CLASS_STEVE
   Default armor for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -263,7 +263,7 @@ CLASS.index = CLASS_STEVE
   Adjusts the player model’s size.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -279,7 +279,7 @@ CLASS.index = CLASS_STEVE
   Default running speed for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -295,7 +295,7 @@ CLASS.index = CLASS_STEVE
   If `true`, multiplies `runSpeed` by the base speed; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
     ```lua
@@ -311,7 +311,7 @@ CLASS.index = CLASS_STEVE
   Default walking speed for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -327,7 +327,7 @@ CLASS.index = CLASS_STEVE
   If `true`, multiplies `walkSpeed` by the base speed; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
     ```lua
@@ -343,7 +343,7 @@ CLASS.index = CLASS_STEVE
   Default jump power for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -359,7 +359,7 @@ CLASS.index = CLASS_STEVE
   If `true`, multiplies `jumpPower` by the base jump power; if `false`, sets it directly.
 
 - **Type:**  
-  `bool`
+  `Bool`
 
 - **Example:**
     ```lua
@@ -375,7 +375,7 @@ CLASS.index = CLASS_STEVE
   Sets the blood color for class members.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua
@@ -391,7 +391,7 @@ CLASS.index = CLASS_STEVE
   Assigns bodygroup values on spawn.
 
 - **Type:**  
-  `table`
+  `Table`
 
 - **Example:**
     ```lua
@@ -407,7 +407,7 @@ CLASS.index = CLASS_STEVE
   Model(s) assigned to the class.
 
 - **Type:**  
-  `string` or `table` of `string`
+  `String` or `Table` of `Strings`
 
 - **Example:**
     ```lua
@@ -430,7 +430,7 @@ CLASS.index = CLASS_STEVE
   A unique ID (team index) identifying the class.
 
 - **Type:**  
-  `number`
+  `Number`
 
 - **Example:**
     ```lua

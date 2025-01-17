@@ -1,4 +1,5 @@
 # lia.attribs
+---
 
 The lia.attribs library is used for managing attributes in the Lilia framework. Attributes represent roleplay-improving traits that can be dynamically loaded and customized through Lua files.
 
@@ -10,10 +11,11 @@ The lia.attribs library is used for managing attributes in the Lilia framework. 
 Loads attribute data from Lua files located in the specified directory.
 
 **Realm:**  
-- Shared
+` Shared`
 
 **Parameters:**  
-- `directory` (`string`): The directory path from which to load attribute files.
+
+- `directory` (`String`): The directory path from which to load attribute files.
 
 **Usage Example:**
 ```lua
@@ -28,9 +30,10 @@ lia.attribs.loadFromDir("schema/attributes")
 Sets up attributes for a given character. Attributes can define custom behavior using the `OnSetup` function in their respective definitions.
 
 **Realm:**  
-- Server
+`Server`
 
 **Parameters:**  
+
 - `client` (`Player`): The player for whom attributes are being set up.
 
 **Usage Example:**
@@ -42,3 +45,5 @@ function ATTRIBUTE:OnSetup(client, value)
     if value > 5 then client:ChatPrint("You are very Strong!") end
 end
 ```
+
+---

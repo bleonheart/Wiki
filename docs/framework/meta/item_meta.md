@@ -16,7 +16,7 @@ Compares this item with another item for equality based on their unique IDs.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -49,11 +49,7 @@ Generates a human-readable string representation of the item.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -77,11 +73,7 @@ Retrieves the quantity of this item. For items with `id == 0`, it returns the `m
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -105,11 +97,7 @@ Gets this item's database ID, which is guaranteed to be unique.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -132,11 +120,7 @@ Returns the model path for this item.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -159,11 +143,7 @@ Retrieves the skin index used by this item (if any).
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -186,11 +166,7 @@ Returns the price of the item. If a `calcPrice` method exists on the item, it is
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -214,11 +190,11 @@ Invokes one of the item's methods dynamically. Sets `self.player` and `self.enti
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-1. **method** (`string`): The name of the method to invoke on the item.  
+1. **method** (`String`): The name of the method to invoke on the item.  
 2. **client** (`Player`, optional): The player related to this call, if any.  
 3. **entity** (`Entity`, optional): The entity related to this call, if any.  
 4. **...**: Additional parameters passed to the invoked method.
@@ -244,11 +220,7 @@ Retrieves the player who currently owns this item, if any. Ownership is determin
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -276,11 +248,11 @@ Retrieves a stored data value from the item's internal `data` table (or from the
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-1. **key** (`string`): The key under which the value is stored.  
+1. **key** (`String`): The key under which the value is stored.  
 2. **default** (`any`, optional): The fallback value if no data is found.
 
 **Returns**
@@ -305,11 +277,7 @@ Combines and returns all stored data from this item, including data from its ent
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -333,16 +301,12 @@ Assigns a function to be executed when a particular event (hook) occurs on this 
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-1. **name** (`string`): The name of the event (e.g., `"onUse"`).  
+1. **name** (`String`): The name of the event (e.g., `"onUse"`).  
 2. **func** (`function`): The function to be called when the event occurs.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -363,16 +327,12 @@ Assigns a function to be executed after a particular hook runs.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-1. **name** (`string`): The name of the event (e.g., `"onUse"`).  
+1. **name** (`String`): The name of the event (e.g., `"onUse"`).  
 2. **func** (`function`): The function to be called after the original hook is executed.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -393,15 +353,7 @@ Called when the item is registered. Useful for post-registration tasks.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Shared**
 
 **Example**
 
@@ -421,15 +373,11 @@ Utility function to print basic item info (and optionally details like owner and
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
 1. **detail** (`boolean`, optional): Whether or not to include extra information (owner, grid position).
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -449,15 +397,7 @@ Utility function that prints all stored data related to this item. Useful for de
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Shared**
 
 **Example**
 
@@ -478,11 +418,7 @@ Retrieves the name of the item. On the server, it returns `ITEM.name` directly; 
 
 **Realm**
 
-- **server** (or **client**, or **shared** depending on usage)
-
-**Parameters**
-
-None.
+- **Server** (or **client**, or **Shared** depending on usage)
 
 **Returns**
 
@@ -507,11 +443,7 @@ Retrieves the description of the item. On the server, returns `ITEM.desc` direct
 
 **Realm**
 
-- **server** (or **client**, or **shared**)
-
-**Parameters**
-
-None.
+- **Server** (or **client**, or **Shared**)
 
 **Returns**
 
@@ -534,7 +466,7 @@ Removes this item from its current inventory. Optionally, the removal can preser
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -563,11 +495,7 @@ Deletes the item from the database (and memory). After calling this, the item no
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
+- **Server**
 
 **Returns**
 
@@ -592,11 +520,7 @@ Removes the item from the game world, its inventory, and then proceeds to delete
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
+- **Server**
 
 **Returns**
 
@@ -621,15 +545,7 @@ Destroys the item instance in memory and notifies connected clients to remove th
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -649,15 +565,7 @@ Called when the item is disposed (i.e., destroyed and removed from memory).
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -677,11 +585,7 @@ Finds the corresponding world entity (`ents.FindByClass("lia_item")`) for this i
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
+- **Server**
 
 **Returns**
 
@@ -709,7 +613,7 @@ Spawns this item into the game world as a physical entity. If an entity already 
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -738,7 +642,7 @@ Moves this item to another inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -772,15 +676,7 @@ Called when the item is created/instanced. Useful for performing operations righ
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -800,15 +696,11 @@ Called when the item data is synced to a specific recipient or broadcast to all 
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **recipient** (`Player`, optional): The player receiving the item data. Could be `nil` if broadcasted to all.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -832,15 +724,7 @@ Called when the item is removed from the database (e.g., after a full delete).
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -860,15 +744,7 @@ Called when the item is restored (for instance, from a saved database state).
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -888,15 +764,11 @@ Synchronizes this item's data with one or more players. If `recipient` is `nil`,
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **recipient** (`Player`, optional): The player to synchronize with. If `nil`, broadcasts to all.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -918,19 +790,15 @@ Sets or updates a key-value pair within the item's data table, optionally update
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **key** (`string`): The key to store the value under.  
+1. **key** (`String`): The key to store the value under.  
 2. **value** (`any`): The value to set. If `nil`, the key is removed.  
 3. **receivers** (`table|Player`, optional): Who should receive the data update. Defaults to the item owner if not provided.  
 4. **noSave** (`boolean`, optional): If `true`, does not save to the database.  
 5. **noCheckEntity** (`boolean`, optional): If `true`, skips updating any existing entity netvars.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -953,17 +821,13 @@ Adds a specified amount to this item's current quantity.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 1. **quantity** (`int`): The amount to add.  
 2. **receivers** (`table|Player`, optional): Recipients for quantity change updates.  
 3. **noCheckEntity** (`boolean`, optional): If `true`, skip updating the entity netvar.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -982,17 +846,13 @@ Directly sets the quantity for this item to a specified value.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 1. **quantity** (`int`): The new quantity.  
 2. **receivers** (`table|Player`, optional): Recipients for quantity change updates.  
 3. **noCheckEntity** (`boolean`, optional): If `true`, skip updating the entity netvar.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1011,14 +871,14 @@ Handles an interaction action (e.g. `"use"`, `"drop"`, etc.) performed by a play
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **action** (`string`): The name of the interaction action (e.g., `"use"`).  
+1. **action** (`String`): The name of the interaction action (e.g., `"use"`).  
 2. **client** (`Player`): The player interacting with the item.  
 3. **entity** (`Entity`, optional): The entity linked to this interaction.  
-4. **data** (`table`, optional): Any additional data associated with the interaction.
+4. **data** (`Table`, optional): Any additional data associated with the interaction.
 
 **Returns**
 

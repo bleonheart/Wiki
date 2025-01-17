@@ -23,12 +23,12 @@ end
     
 | **Variable**                                 | **Purpose**                                                                                                     | **Type**   | **Example**                           |
 |----------------------------------------------|-----------------------------------------------------------------------------------------------------------------|------------|---------------------------------------|
-| `ATTRIBUTE.name`                             | Specifies the display name of the attribute.                                                                    | `string`   | `ATTRIBUTE.name = "Strength"`         |
-| `ATTRIBUTE.desc`                             | Provides a short description of the attribute.                                                                  | `string`   | `ATTRIBUTE.desc = "Strength Skill."`   |
-| `ATTRIBUTE.noStartBonus` *(Optional)*        | Determines whether the attribute can receive a bonus at the start of the game.                                 | `bool`     | `ATTRIBUTE.noStartBonus = false`      |
-| `ATTRIBUTE.maxValue` *(Optional)*            | Specifies the maximum value the attribute can reach.                                                           | `number`   | `ATTRIBUTE.maxValue = 50`              |
-| `ATTRIBUTE.startingMax` *(Optional)*         | Defines the maximum value the attribute can start with.                                                        | `number`   | `ATTRIBUTE.startingMax = 15`           |
-| `ATTRIBUTE:OnSetup(client, value)` *(Optional)* | Executes custom logic when the attribute is set up for a player, such as notifications or additional effects. | `function` | `ATTRIBUTE:OnSetup(client, value)`     |
+| `ATTRIBUTE.name`                             | Specifies the display name of the attribute.                                                                    | `String`   | `ATTRIBUTE.name = "Strength"`         |
+| `ATTRIBUTE.desc`                             | Provides a short description of the attribute.                                                                  | `String`   | `ATTRIBUTE.desc = "Strength Skill."`   |
+| `ATTRIBUTE.noStartBonus` *(Optional)*        | Determines whether the attribute can receive a bonus at the start of the game.                                 | `Bool`     | `ATTRIBUTE.noStartBonus = false`      |
+| `ATTRIBUTE.maxValue` *(Optional)*            | Specifies the maximum value the attribute can reach.                                                           | `Number`   | `ATTRIBUTE.maxValue = 50`              |
+| `ATTRIBUTE.startingMax` *(Optional)*         | Defines the maximum value the attribute can start with.                                                        | `Number`   | `ATTRIBUTE.startingMax = 15`           |
+| `ATTRIBUTE:OnSetup(client, value)` *(Optional)* | Executes custom logic when the attribute is set up for a player, such as notifications or additional effects. | `Function` | `ATTRIBUTE:OnSetup(client, value)`     |
     
 ---
     
@@ -40,7 +40,7 @@ end
   Specifies the display name of the attribute.
     
 - **Type:**  
-  `string`
+  `String`
     
 - **Example:**
     ```lua
@@ -56,7 +56,7 @@ end
   Provides a short description of the attribute.
     
 - **Type:**  
-  `string`
+  `String`
     
 - **Example:**
     ```lua
@@ -72,7 +72,7 @@ end
   Determines whether the attribute can receive a bonus at the start of the game.
     
 - **Type:**  
-  `bool`
+  `Bool`
     
 - **Example:**
     ```lua
@@ -88,7 +88,7 @@ end
   Specifies the maximum value the attribute can reach.
     
 - **Type:**  
-  `number`
+  `Number`
     
 - **Example:**
     ```lua
@@ -104,7 +104,7 @@ end
   Defines the maximum value the attribute can start with.
     
 - **Type:**  
-  `number`
+  `Number`
     
 - **Example:**
     ```lua
@@ -120,7 +120,7 @@ end
   Runs custom logic when the attribute is set up for a player. This can include notifications or additional effects.
     
 - **Type:**  
-  `function`
+  `Function`
     
 - **Example:**
     ```lua

@@ -16,11 +16,7 @@ Checks if the entity is a physics prop.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -46,11 +42,7 @@ Checks if the entity is an item entity.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -74,11 +66,7 @@ Checks if the entity is a money entity.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -102,11 +90,7 @@ Checks if the entity is a simfphys car.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -130,11 +114,7 @@ Retrieves the drop position for an item associated with the entity.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -157,7 +137,7 @@ Checks if there is an entity near the current entity within a specified radius.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -187,11 +167,7 @@ Retrieves the creator of the entity.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -216,15 +192,11 @@ Assigns a creator to the entity.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **client** (`Player`): The player to assign as the creator of the entity.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -242,26 +214,22 @@ Sends a networked variable.
 
 **Realm**
 
-- **server**
-- **@internal**
+- **Server**~
+
+**Internal:**  
+
+This function is intended for internal use and should not be called directly.
 
 **Parameters**
 
-- **key** (`string`): Identifier of the networked variable.
+- **key** (`String`): Identifier of the networked variable.
 - **receiver** (`Player|nil`): The players to send the networked variable to.
-
-**Returns**
-
-None.
 
 **Example**
 
 ```lua
 entity:sendNetVar("health", player)
 ```
-
-*This function is internal and should only be used if you are absolutely certain about its implications.*
-
 ---
 
 ## **clearNetVars**
@@ -272,24 +240,21 @@ Clears all of the networked variables.
 
 **Realm**
 
-- **server**
-- **@internal**
+- **Server**
+
+**Internal:**  
+
+This function is intended for internal use and should not be called directly.
 
 **Parameters**
 
 - **receiver** (`Player|nil`): The players to clear the networked variables for.
-
-**Returns**
-
-None.
 
 **Example**
 
 ```lua
 entity:clearNetVars(player)
 ```
-
-*This function is internal and should only be used if you are absolutely certain about its implications.*
 
 ---
 
@@ -301,17 +266,13 @@ Sets the value of a networked variable.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **key** (`string`): Identifier of the networked variable.
+- **key** (`String`): Identifier of the networked variable.
 - **value** (`any`): New value to assign to the networked variable.
 - **receiver** (`Player|nil`): The players to send the networked variable to.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -329,12 +290,12 @@ Retrieves a networked variable. If it is not set, it'll return the default that 
 
 **Realm**
 
-- **server**
-- **client**
+- **Server**
+- **Client**
 
 **Parameters**
 
-- **key** (`string`): Identifier of the networked variable.
+- **key** (`String`): Identifier of the networked variable.
 - **default** (`any`): The default value to return if the networked variable does not exist.
 
 **Returns**

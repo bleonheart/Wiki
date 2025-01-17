@@ -2,7 +2,7 @@
 
 Physical representation of connected players.
 
-`Player`s are a type of `Entity`. They are a physical representation of a `Character` - and can possess at most one `Character` object at a time that you can interface with.
+Players are a type of Entity. They are a physical representation of a `Character` - and can possess at most one `Character` object at a time that you can interface with.
 
 See the [Garry's Mod Wiki](https://wiki.garrysmod.com/page/Category:Player) for all other methods that the `Player` class has.
 
@@ -16,11 +16,7 @@ Retrieves this player's currently possessed `Character` object if it exists.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -45,11 +41,7 @@ Returns this player's current name. If the player has a character loaded, it ret
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -71,11 +63,11 @@ Checks if the player has a specified CAMI privilege.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **privilegeName** (`string`): The name of the privilege to check.
+- **privilegeName** (`String`): The name of the privilege to check.
 
 **Returns**
 
@@ -99,11 +91,7 @@ Gets the current vehicle the player is in, if any.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -128,11 +116,7 @@ Checks if the player is in a valid vehicle.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -156,11 +140,7 @@ Checks if the player is currently in noclip mode.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -184,11 +164,7 @@ Checks if the player has a valid ragdoll entity.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -212,11 +188,7 @@ Returns the player's ragdoll entity if it exists and is valid.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -241,11 +213,7 @@ Determines whether the player is stuck using a trace.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -269,7 +237,7 @@ Checks if the player is near another entity within a specified radius.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -298,12 +266,12 @@ Retrieves entities near the player within a specified radius. Can filter to only
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
 1. **radius** (`int`): The radius within which to search for entities.
-2. **playerOnly** (`bool`): If `true`, only return player entities.
+2. **playerOnly** (`Bool`): If `true`, only return player entities.
 
 **Returns**
 
@@ -328,11 +296,7 @@ Retrieves the active weapon item of the player along with its corresponding inve
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -358,11 +322,7 @@ Checks if the player is running based on their velocity compared to their walk s
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -386,11 +346,7 @@ Determines if the player's character model is female based on model naming conve
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -414,11 +370,7 @@ Calculates the position to drop an item from the player's inventory based on the
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -441,11 +393,7 @@ Retrieves the items from the player's character inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -472,11 +420,7 @@ Retrieves the entity traced by the player's aim within a short distance.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -501,11 +445,7 @@ Performs a hull trace from the player's view and returns the trace result.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -530,7 +470,7 @@ Retrieves the entity within the player's line of sight up to a specified distanc
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -559,15 +499,11 @@ Loads Lilia data for the player from the database.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **callback** (`function`): A function to call after the data is loaded, receiving the loaded data as an argument.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -587,15 +523,7 @@ Saves the player's Lilia data to the database.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -613,17 +541,13 @@ Sets a key-value pair in the player's Lilia data. Optionally suppresses networki
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **key** (`string`): The key for the data.
+1. **key** (`String`): The key for the data.
 2. **value** (`any`, optional): The value to set for the specified key. Defaults to `nil` if not provided.
 3. **noNetworking** (`boolean`, optional): If `true`, the data update will not be sent to clients. Defaults to `false`.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -645,15 +569,11 @@ Notifies the player with a message in the chatbox.
 
 **Realm**
 
-- **server** and **client**
+- **Server** and ****Client****
 
 **Parameters**
 
-- **message** (`string`): The message to notify the player.
-
-**Returns**
-
-None.
+- **message** (`String`): The message to notify the player.
 
 **Example**
 
@@ -671,16 +591,12 @@ Notifies the player with a localized message in the chatbox.
 
 **Realm**
 
-- **server** and **client**
+- **Server** and ****Client****
 
 **Parameters**
 
-- **message** (`string`): The key of the localized message to notify the player.
+- **message** (`String`): The key of the localized message to notify the player.
 - **...** (`any`): Additional arguments to format the localized message.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -698,15 +614,11 @@ Notifies the player with an error message in the chatbox.
 
 **Realm**
 
-- **server** and **client**
+- **Server** and ****Client****
 
 **Parameters**
 
-- **message** (`string`): The error message to notify the player.
-
-**Returns**
-
-None.
+- **message** (`String`): The error message to notify the player.
 
 **Example**
 
@@ -724,16 +636,12 @@ Notifies the player with a localized error message in the chatbox.
 
 **Realm**
 
-- **server** and **client**
+- **Server** and ****Client****
 
 **Parameters**
 
-- **message** (`string`): The key of the localized error message to notify the player.
+- **message** (`String`): The key of the localized error message to notify the player.
 - **...** (`any`): Additional arguments to format the localized message.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -751,11 +659,11 @@ Retrieves a value from the player's Lilia data.
 
 **Realm**
 
-- **server** and **client**
+- **Server** and ****Client****
 
 **Parameters**
 
-1. **key** (`string`): The key for the data.
+1. **key** (`String`): The key for the data.
 2. **default** (`any`, optional): The default value to return if the key does not exist.
 
 **Returns**
@@ -779,11 +687,7 @@ Retrieves the full Lilia data table for the player.
 
 **Realm**
 
-- **server** and **client**
-
-**Parameters**
-
-None.
+- **Server** and ****Client****
 
 **Returns**
 
@@ -807,15 +711,11 @@ Sets the player's ragdoll entity.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **entity** (`Entity`): The entity to set as the player's ragdoll.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -834,19 +734,15 @@ Sets an action bar for the player with optional duration and callback.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **text** (`string`): The text to display on the action bar.
+1. **text** (`String`): The text to display on the action bar.
 2. **time** (`int`, optional): The duration for the action bar to display in seconds. Set to `0` or `nil` to remove the action bar immediately.
 3. **callback** (`function`, optional): Function to execute when the action bar timer expires.
 4. **startTime** (`int`, optional): The start time of the action bar, defaults to the current time.
 5. **finishTime** (`int`, optional): The finish time of the action bar, defaults to `startTime + time`.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -864,15 +760,7 @@ Stops the action bar currently being displayed for the player.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -890,18 +778,14 @@ Plays a sound for the player.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **sound** (`string`): The sound to play.
+1. **sound** (`String`): The sound to play.
 2. **volume** (`int`, optional): The volume of the sound. Defaults to `75`.
 3. **pitch** (`int`, optional): The pitch of the sound. Defaults to `100`.
-4. **shouldEmit** (`bool`): Whether to emit the sound server-side (`true`) or send it to the client (`false`).
-
-**Returns**
-
-None.
+4. **shouldEmit** (`Bool`): Whether to emit the sound server-side (`true`) or send it to the client (`false`).
 
 **Example**
 
@@ -919,15 +803,11 @@ Opens a VGUI panel for the player.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **panel** (`string`): The name of the VGUI panel to open.
-
-**Returns**
-
-None.
+- **panel** (`String`): The name of the VGUI panel to open.
 
 **Example**
 
@@ -945,15 +825,11 @@ Opens a web page for the player.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **url** (`string`): The URL of the web page to open.
-
-**Returns**
-
-None.
+- **url** (`String`): The URL of the web page to open.
 
 **Example**
 
@@ -971,18 +847,14 @@ Requests a dropdown selection from the player.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-1. **title** (`string`): The title of the request.
-2. **subTitle** (`string`): The subtitle of the request.
-3. **options** (`table`): The table of options to choose from.
+1. **title** (`String`): The title of the request.
+2. **subTitle** (`String`): The subtitle of the request.
+3. **options** (`Table`): The table of options to choose from.
 4. **callback** (`function`): The function to call upon receiving the selected option.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1002,19 +874,15 @@ Requests multiple options selection from the player.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **title** (`string`): The title of the request.
-2. **subTitle** (`string`): The subtitle of the request.
-3. **options** (`table`): The table of options to choose from.
+1. **title** (`String`): The title of the request.
+2. **subTitle** (`String`): The subtitle of the request.
+3. **options** (`Table`): The table of options to choose from.
 4. **limit** (`int`): The maximum number of selectable options.
 5. **callback** (`function`): The function to call upon receiving the selected options.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1034,14 +902,14 @@ Requests a string input from the player. Supports both callback and promise-base
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **title** (`string`): The title of the string input dialog.
-2. **subTitle** (`string`): The subtitle or description of the string input dialog.
+1. **title** (`String`): The title of the string input dialog.
+2. **subTitle** (`String`): The subtitle or description of the string input dialog.
 3. **callback** (`function`, optional): The function to call with the entered string.
-4. **default** (`string`, optional): The default value for the string input.
+4. **default** (`String`, optional): The default value for the string input.
 
 **Returns**
 
@@ -1074,19 +942,15 @@ Requests a binary choice from the player.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **question** (`string`): The question to present to the player.
-2. **option1** (`string`): The text for the first option.
-3. **option2** (`string`): The text for the second option.
-4. **manualDismiss** (`bool`): Whether the notice should be manually dismissed.
+1. **question** (`String`): The question to present to the player.
+2. **option1** (`String`): The text for the first option.
+3. **option2** (`String`): The text for the second option.
+4. **manualDismiss** (`Bool`): Whether the notice should be manually dismissed.
 5. **callback** (`function`): The function to call with the choice (`0` or `1`) when the player selects an option.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1110,11 +974,7 @@ Retrieves the player's total playtime.
 
 **Realm**
 
-- **server** and **client**
-
-**Parameters**
-
-None.
+- **Server** and ****Client****
 
 **Returns**
 
@@ -1137,11 +997,11 @@ Creates a ragdoll entity for the player on the server.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **dontSetPlayer** (`bool`): Determines whether to associate the player with the ragdoll.
+- **dontSetPlayer** (`Bool`): Determines whether to associate the player with the ragdoll.
 
 **Returns**
 
@@ -1163,7 +1023,7 @@ Performs a stared action towards an entity for a certain duration. Executes call
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -1172,10 +1032,6 @@ Performs a stared action towards an entity for a certain duration. Executes call
 3. **time** (`int`, optional): The duration of the stared action in seconds. Defaults to `5`.
 4. **onCancel** (`function`): The function to call if the stared action is canceled.
 5. **distance** (`int`, optional): The maximum distance for the stared action. Defaults to `96`.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1197,15 +1053,11 @@ Notifies the player with a message using the Lilia notice system.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **message** (`string`): The message to notify the player.
-
-**Returns**
-
-None.
+- **message** (`String`): The message to notify the player.
 
 **Example**
 
@@ -1223,16 +1075,12 @@ Notifies the player with a localized message using the Lilia notice system.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **message** (`string`): The key of the localized message to notify the player.
+- **message** (`String`): The key of the localized message to notify the player.
 - **...** (`any`): Additional arguments to format the localized message.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -1250,11 +1098,11 @@ Creates a ragdoll entity for the player. Can optionally freeze the ragdoll initi
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **freeze** (`bool`): Whether to freeze the ragdoll initially.
+- **freeze** (`Bool`): Whether to freeze the ragdoll initially.
 
 **Returns**
 
@@ -1276,18 +1124,14 @@ Sets the player to a ragdolled state or removes the ragdoll.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **state** (`bool`): Whether to set the player to a ragdolled state (`true`) or remove the ragdoll (`false`).
+1. **state** (`Bool`): Whether to set the player to a ragdolled state (`true`) or remove the ragdoll (`false`).
 2. **time** (`int`, optional): The duration for which the player remains ragdolled.
 3. **getUpGrace** (`int`, optional): The grace period for the player to get up before the ragdoll is removed.
-4. **getUpMessage** (`string`, optional): The message displayed when the player is getting up. Defaults to `"@wakingUp"`.
-
-**Returns**
-
-None.
+4. **getUpMessage** (`String`, optional): The message displayed when the player is getting up. Defaults to `"@wakingUp"`.
 
 **Example**
 
@@ -1305,15 +1149,7 @@ Synchronizes networked variables with the player.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -1331,16 +1167,12 @@ Sets a local variable for the player and synchronizes it over the network.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-1. **key** (`string`): The key of the variable.
+1. **key** (`String`): The key of the variable.
 2. **value** (`any`): The value of the variable.
-
-**Returns**
-
-None.
 
 **Example**
 

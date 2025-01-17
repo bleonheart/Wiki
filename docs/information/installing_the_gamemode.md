@@ -86,7 +86,7 @@ If you haven't already, set up your Garry's Mod server. Ensure it's running smoo
 
 2. **Edit the Configuration File:**
 
-    - Locate the configuration file, typically found at `schema/config/shared.lua`.
+    - Locate the configuration file, typically found at `schema/config/Shared.lua`.
     - Open the file in a text editor.
 
 3. **Override Default Values:**
@@ -148,7 +148,7 @@ To enhance your roleplaying experience, install a roleplay schema compatible wit
 
 4. **Configure Factions, Items, and Modules:**
 
-    - Navigate to the schema's configuration files (e.g., `schema/config/shared.lua`).
+    - Navigate to the schema's configuration files (e.g., `schema/config/Shared.lua`).
     - Customize factions, items, and modules as required to match your server's gameplay mechanics.
 
 5. **Set the Startup Gamemode:**

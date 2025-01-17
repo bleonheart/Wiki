@@ -14,11 +14,11 @@ Retrieves data associated with a specified key from the inventory.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **key** (`string`): The key for the data.
+- **key** (`String`): The key for the data.
 - **default** (`any`, optional): The default value to return if the key does not exist.
 
 **Returns**
@@ -42,11 +42,11 @@ Extends the inventory to create a subclass with a specified class name.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **className** (`string`): The name of the subclass.
+- **className** (`String`): The name of the subclass.
 
 **Returns**
 
@@ -70,15 +70,7 @@ This function is meant to be overridden in subclasses to define specific configu
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Shared**
 
 **Example**
 
@@ -98,16 +90,12 @@ Adds a data proxy to the inventory for a specified key.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
 - **key** (`any`): The key for the data proxy.
 - **onChange** (`function`): The function to call when the data associated with the key changes.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -127,12 +115,12 @@ Retrieves items with a specified unique ID from the inventory.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **uniqueID** (`string`): The unique ID of the items to retrieve.
-- **onlyMain** (`bool`): Whether to retrieve only main items.
+- **uniqueID** (`String`): The unique ID of the items to retrieve.
+- **onlyMain** (`Bool`): Whether to retrieve only main items.
 
 **Returns**
 
@@ -159,15 +147,11 @@ Registers the inventory with a specified type ID.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **typeID** (`string`): The type ID to register the inventory with.
-
-**Returns**
-
-None.
+- **typeID** (`String`): The type ID to register the inventory with.
 
 **Example**
 
@@ -186,11 +170,7 @@ Creates a new instance of the inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -212,11 +192,7 @@ Returns a string representation of the inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -239,11 +215,7 @@ Retrieves the type of the inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -266,17 +238,13 @@ Callback function called when data associated with a key changes.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
 - **key** (`any`): The key whose data has changed.
 - **oldValue** (`any`): The old value of the data.
 - **newValue** (`any`): The new value of the data.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -296,11 +264,7 @@ Retrieves all items in the inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -325,11 +289,11 @@ Retrieves items of a specific type from the inventory.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **itemType** (`string`): The type of items to retrieve.
+- **itemType** (`String`): The type of items to retrieve.
 
 **Returns**
 
@@ -354,11 +318,11 @@ Retrieves the first item of a specific type from the inventory.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **itemType** (`string`): The type of item to retrieve.
+- **itemType** (`String`): The type of item to retrieve.
 
 **Returns**
 
@@ -383,11 +347,11 @@ Checks if the inventory contains an item of a specific type.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **itemType** (`string`): The type of item to check for.
+- **itemType** (`String`): The type of item to check for.
 
 **Returns**
 
@@ -413,11 +377,11 @@ Retrieves the total count of items in the inventory, optionally filtered by item
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
-- **itemType** (`string`, optional): The type of item to count. If `nil`, counts all items.
+- **itemType** (`String`, optional): The type of item to count. If `nil`, counts all items.
 
 **Returns**
 
@@ -442,11 +406,7 @@ Retrieves the ID of the inventory.
 
 **Realm**
 
-- **shared**
-
-**Parameters**
-
-None.
+- **Shared**
 
 **Returns**
 
@@ -469,7 +429,7 @@ Checks if two inventories are equal based on their IDs.
 
 **Realm**
 
-- **shared**
+- **Shared**
 
 **Parameters**
 
@@ -499,12 +459,12 @@ Adds an item to the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **item** (`Item`): The item to add to the inventory.
-- **noReplicate** (`bool`): Set to `true` to prevent `OnItemAdded` from being called on the added item.
+- **noReplicate** (`Bool`): Set to `true` to prevent `OnItemAdded` from being called on the added item.
 
 **Returns**
 
@@ -527,7 +487,7 @@ Alias for the `addItem` function.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -553,15 +513,11 @@ Synchronizes the addition of an item with clients.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **item** (`Item`): The item being added.
-
-**Returns**
-
-None.
 
 **Example**
 
@@ -579,11 +535,11 @@ Initializes the storage for the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **initialData** (`table`): Initial data for the inventory.
+- **initialData** (`Table`): Initial data for the inventory.
 
 **Returns**
 
@@ -608,15 +564,7 @@ Restores the inventory from storage.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -634,12 +582,12 @@ Removes an item from the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **itemID** (`int`): The ID of the item to remove.
-- **preserveItem** (`bool`): Whether to preserve the item's data in the database.
+- **preserveItem** (`Bool`): Whether to preserve the item's data in the database.
 
 **Returns**
 
@@ -663,7 +611,7 @@ Alias for the `removeItem` function.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -691,7 +639,7 @@ Sets data associated with a key in the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -718,12 +666,12 @@ Checks if a certain action is permitted for the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **action** (`string`): The action to check for access.
-- **context** (`table`): Additional context for the access check.
+- **action** (`String`): The action to check for access.
+- **context** (`Table`): Additional context for the access check.
 
 **Returns**
 
@@ -751,7 +699,7 @@ Adds an access rule to the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -782,7 +730,7 @@ Removes an access rule from the inventory.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
@@ -808,11 +756,7 @@ Retrieves the recipients for synchronization.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
+- **Server**
 
 **Returns**
 
@@ -837,15 +781,7 @@ Initializes an instance of the inventory.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -863,15 +799,7 @@ Callback function called when the inventory is loaded.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -891,11 +819,7 @@ Loads items from the database into the inventory.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
+- **Server**
 
 **Returns**
 
@@ -919,15 +843,7 @@ Callback function called when items are loaded into the inventory.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -947,11 +863,11 @@ Instantiates a new inventory instance.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **initialData** (`table`): Initial data for the inventory instance.
+- **initialData** (`Table`): Initial data for the inventory instance.
 
 **Returns**
 
@@ -973,16 +889,12 @@ Synchronizes data changes with clients.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
 - **key** (`any`): The key whose data has changed.
-- **recipients** (`table`): The recipients to synchronize with.
-
-**Returns**
-
-None.
+- **recipients** (`Table`): The recipients to synchronize with.
 
 **Example**
 
@@ -1000,15 +912,11 @@ Synchronizes the inventory with clients.
 
 **Realm**
 
-- **server**
+- **Server**
 
 **Parameters**
 
-- **recipients** (`table`, optional): The recipients to synchronize with.
-
-**Returns**
-
-None.
+- **recipients** (`Table`, optional): The recipients to synchronize with.
 
 **Example**
 
@@ -1026,15 +934,7 @@ Deletes the inventory.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -1052,15 +952,7 @@ Destroys the inventory and its associated items.
 
 **Realm**
 
-- **server**
-
-**Parameters**
-
-None.
-
-**Returns**
-
-None.
+- **Server**
 
 **Example**
 
@@ -1078,7 +970,7 @@ Displays the inventory UI to the specified parent element.
 
 **Realm**
 
-- **client**
+- `Client`
 
 **Parameters**
 
