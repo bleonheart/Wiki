@@ -174,7 +174,7 @@ Chat messages can have different classes or "types" of messages that have differ
   ```lua
   onCanHear = 1000 -- Message can be heard by any player 1000 units away from the speaking player
   
-  onCanHear = function(self, speaker, listener)
+  onCanHear = function(speaker, text)
       return true -- The speaking player will be heard by everyone
   end
   ```
@@ -184,7 +184,7 @@ Chat messages can have different classes or "types" of messages that have differ
   
   **Example:**
   ```lua
-  onCanSay = function(self, speaker, text)
+  onCanSay = function(speaker, text)
       return false -- The speaker will never be able to send a message with this chat class
   end
   ```
@@ -194,7 +194,7 @@ Chat messages can have different classes or "types" of messages that have differ
   
   **Example:**
   ```lua
-  onGetColor = function(self, speaker, text)
+  onGetColor = function(speaker, text)
       return Color(math.random(120, 200), 0, 0) -- Each message will be colored a random shade of red
   end
   ```
@@ -206,7 +206,7 @@ Chat messages can have different classes or "types" of messages that have differ
   
   **Example:**
   ```lua
-  onChatAdd = function(self, speaker, text, bAnonymous, data)
+  onChatAdd = function(speaker, text, bAnonymous, data)
       chat.AddText(color_white, speaker:GetName(), ": ", text) -- Adds white text in the form of "Player Name: Message contents"
   end
   ```
