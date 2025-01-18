@@ -16,7 +16,7 @@ Retrieves this player's currently possessed `Character` object if it exists.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -41,7 +41,7 @@ Returns this player's current name. If the player has a character loaded, it ret
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -63,7 +63,7 @@ Checks if the player has a specified CAMI privilege.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -91,7 +91,7 @@ Gets the current vehicle the player is in, if any.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -116,7 +116,7 @@ Checks if the player is in a valid vehicle.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -140,7 +140,7 @@ Checks if the player is currently in noclip mode.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -164,7 +164,7 @@ Checks if the player has a valid ragdoll entity.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -188,7 +188,7 @@ Returns the player's ragdoll entity if it exists and is valid.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -213,7 +213,7 @@ Determines whether the player is stuck using a trace.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -237,7 +237,7 @@ Checks if the player is near another entity within a specified radius.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -266,7 +266,7 @@ Retrieves entities near the player within a specified radius. Can filter to only
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -296,7 +296,7 @@ Retrieves the active weapon item of the player along with its corresponding inve
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -322,7 +322,7 @@ Checks if the player is running based on their velocity compared to their walk s
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -346,7 +346,7 @@ Determines if the player's character model is female based on model naming conve
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -370,7 +370,7 @@ Calculates the position to drop an item from the player's inventory based on the
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -393,7 +393,7 @@ Retrieves the items from the player's character inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -420,7 +420,7 @@ Retrieves the entity traced by the player's aim within a short distance.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -445,7 +445,7 @@ Performs a hull trace from the player's view and returns the trace result.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -470,7 +470,7 @@ Retrieves the entity within the player's line of sight up to a specified distanc
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -499,7 +499,7 @@ Loads Lilia data for the player from the database.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -523,7 +523,7 @@ Saves the player's Lilia data to the database.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -541,7 +541,7 @@ Sets a key-value pair in the player's Lilia data. Optionally suppresses networki
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -569,7 +569,7 @@ Notifies the player with a message in the chatbox.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Parameters**
 
@@ -591,7 +591,7 @@ Notifies the player with a localized message in the chatbox.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Parameters**
 
@@ -614,7 +614,7 @@ Notifies the player with an error message in the chatbox.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Parameters**
 
@@ -636,7 +636,7 @@ Notifies the player with a localized error message in the chatbox.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Parameters**
 
@@ -659,7 +659,7 @@ Retrieves a value from the player's Lilia data.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Parameters**
 
@@ -687,7 +687,7 @@ Retrieves the full Lilia data table for the player.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Returns**
 
@@ -711,7 +711,7 @@ Sets the player's ragdoll entity.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -734,7 +734,7 @@ Sets an action bar for the player with optional duration and callback.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -760,7 +760,7 @@ Stops the action bar currently being displayed for the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -778,7 +778,7 @@ Plays a sound for the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -803,7 +803,7 @@ Opens a VGUI panel for the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -825,7 +825,7 @@ Opens a web page for the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -847,7 +847,7 @@ Requests a dropdown selection from the player.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -874,7 +874,7 @@ Requests multiple options selection from the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -902,7 +902,7 @@ Requests a string input from the player. Supports both callback and promise-base
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -942,7 +942,7 @@ Requests a binary choice from the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -974,7 +974,7 @@ Retrieves the player's total playtime.
 
 **Realm**
 
-- **Server** and ****Client****
+`Server` and **Client**
 
 **Returns**
 
@@ -997,7 +997,7 @@ Creates a ragdoll entity for the player on the server.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1023,7 +1023,7 @@ Performs a stared action towards an entity for a certain duration. Executes call
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1053,7 +1053,7 @@ Notifies the player with a message using the Lilia notice system.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1075,7 +1075,7 @@ Notifies the player with a localized message using the Lilia notice system.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1098,7 +1098,7 @@ Creates a ragdoll entity for the player. Can optionally freeze the ragdoll initi
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1124,7 +1124,7 @@ Sets the player to a ragdolled state or removes the ragdoll.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1149,7 +1149,7 @@ Synchronizes networked variables with the player.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -1167,7 +1167,7 @@ Sets a local variable for the player and synchronizes it over the network.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -1178,6 +1178,719 @@ Sets a local variable for the player and synchronizes it over the network.
 
 ```lua
 player:setLocalVar("health", 100)
+```
+
+---
+
+## **isFaction**
+
+**Description**
+
+Checks if the player belongs to the specified faction.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **faction** (`String`): The faction to check against.
+
+**Returns**
+
+- **Boolean**: `true` if the player belongs to the specified faction, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isFaction("Police") then
+    print("Player is in the Police faction.")
+end
+```
+
+---
+
+## **isClass**
+
+**Description**
+
+Checks if the player belongs to the specified class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`String`): The class to check against.
+
+**Returns**
+
+- **Boolean**: `true` if the player belongs to the specified class, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isClass("Medic") then
+    print("Player is a Medic.")
+end
+```
+
+---
+
+## **getDarkRPVar**
+
+**Description**
+
+Retrieves the player's DarkRP money. This is used as compatibility for DarkRP Vars.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **var** (`String`): The DarkRP variable to fetch (only `"money"` is allowed).
+
+**Returns**
+
+- **Integer|nil**: The player's money if the variable is valid, or `nil` if not.
+
+**Example**
+
+```lua
+local money = player:getDarkRPVar("money")
+if money then
+    print("Player Money:", money)
+end
+```
+
+---
+
+## **getMoney**
+
+**Description**
+
+Retrieves the amount of money owned by the player's character.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The amount of money owned by the player's character.
+
+**Example**
+
+```lua
+local money = player:getMoney()
+print("Player Money:", money)
+```
+
+---
+
+## **canAfford**
+
+**Description**
+
+Checks if the player's character can afford a specified amount of money. This function uses Lilia methods to determine if the player can afford the specified amount. It is designed to be compatible with the DarkRP `canAfford` method.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **amount** (`int`): The amount of money to check.
+
+**Returns**
+
+- **Boolean**: Whether the player's character can afford the specified amount of money.
+
+**Example**
+
+```lua
+if player:canAfford(500) then
+    print("Player can afford the item.")
+else
+    print("Player cannot afford the item.")
+end
+```
+
+---
+
+## **addMoney**
+
+**Description**
+
+Adds money to the player's character. This function uses Lilia methods to add the specified amount of money to the player. It handles wallet limits and spawns excess money as an item in the world if necessary.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **amount** (`int`): The amount of money to add.
+
+**Returns**
+
+- **Boolean**: `true` if the operation was successful, `false` otherwise.
+
+**Example**
+
+```lua
+player:addMoney(1000)
+```
+
+---
+
+## **takeMoney**
+
+**Description**
+
+Takes money from the player's character.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **amount** (`int`): The amount of money to take.
+
+**Example**
+
+```lua
+player:takeMoney(200)
+```
+
+---
+
+## **hasSkillLevel**
+
+**Description**
+
+Checks if the player has a skill level equal to or greater than the specified level.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+1. **skill** (`String`): The skill to check.
+2. **level** (`int`): The required skill level.
+
+**Returns**
+
+- **Boolean**: Whether the player's skill level meets or exceeds the specified level.
+
+**Example**
+
+```lua
+if player:hasSkillLevel("Archery", 3) then
+    print("Player has Archery level 3 or higher.")
+end
+```
+
+---
+
+## **meetsRequiredSkills**
+
+**Description**
+
+Checks if the player meets the required skill levels.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **requiredSkillLevels** (`Table`): A table containing the required skill levels.
+
+**Returns**
+
+- **Boolean**: Whether the player meets all the required skill levels.
+
+**Example**
+
+```lua
+local requiredSkills = {Archery = 2, Stealth = 3}
+if player:meetsRequiredSkills(requiredSkills) then
+    print("Player meets all required skills.")
+else
+    print("Player does not meet the required skills.")
+end
+```
+
+---
+
+## **restoreStamina**
+
+**Description**
+
+Restores stamina for the player. This function restores a certain amount of stamina to the player, clamping the value between 0 and the character's maximum stamina. If stamina is restored above a certain threshold, it will trigger the removal of a breathless state.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **amount** (`int`): The amount of stamina to restore.
+
+**Example**
+
+```lua
+player:restoreStamina(10)
+```
+
+---
+
+## **consumeStamina**
+
+**Description**
+
+Consumes stamina from the player. This function decreases the player's stamina by a specified amount, clamping the value between 0 and the character's maximum stamina. If stamina is depleted, it may trigger a breathless state.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **amount** (`int`): The amount of stamina to consume.
+
+**Example**
+
+```lua
+player:consumeStamina(5)
+```
+
+---
+
+## **CanEditVendor**
+
+**Description**
+
+Determines if the player can edit a vendor. This function checks whether the player has the necessary privilege to edit vendors.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the player has the privilege to edit vendors, `false` otherwise.
+
+**Example**
+
+```lua
+if player:CanEditVendor() then
+    print("Player can edit vendors.")
+end
+```
+
+---
+
+## **CanOverrideView**
+
+**Description**
+
+Checks various conditions to determine if the player can switch to a third-person view.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the player can override the view to third-person, `false` otherwise.
+
+**Example**
+
+```lua
+if player:CanOverrideView() then
+    print("Player can switch to third-person view.")
+end
+```
+
+---
+
+## **IsInThirdPerson**
+
+**Description**
+
+Checks if the player is currently using third-person view. This function verifies if third-person mode is active for the player.
+
+**Realm**
+
+`Client`
+
+**Returns**
+
+- **Boolean**: `true` if the player is in third-person view, `false` otherwise.
+
+**Example**
+
+```lua
+if player:IsInThirdPerson() then
+    print("Player is in third-person view.")
+end
+```
+
+---
+
+## **isUser**
+
+**Description**
+
+Checks if the player belongs to the "user" user group.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the player is in the "user" group, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isUser() then
+    print("Player is a regular user.")
+end
+```
+
+---
+
+## **isStaff**
+
+**Description**
+
+Checks if the player is a staff member.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the player is a staff member, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isStaff() then
+    print("Player is a staff member.")
+end
+```
+
+---
+
+## **isVIP**
+
+**Description**
+
+Checks if the player is a VIP.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the player is a VIP, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isVIP() then
+    print("Player is a VIP.")
+end
+```
+
+---
+
+## **isStaffOnDuty**
+
+**Description**
+
+Checks if the staff member is currently on duty (FACTION_STAFF).
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the staff member is currently on duty, `false` otherwise.
+
+**Example**
+
+```lua
+if player:isStaffOnDuty() then
+    print("Staff member is on duty.")
+end
+```
+
+---
+
+## **hasWhitelist**
+
+**Description**
+
+Checks if the player has whitelisted access to a faction.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **faction** (`int`): The faction to check for whitelisting.
+
+**Returns**
+
+- **Boolean**: Whether the player has whitelisted access to the specified faction.
+
+**Example**
+
+```lua
+if player:hasWhitelist(TEAM_POLICE) then
+    print("Player has access to the Police faction.")
+end
+```
+
+---
+
+## **getClass**
+
+**Description**
+
+Retrieves the class of the player's character.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **String|nil**: The class of the player's character, or `nil` if not found.
+
+**Example**
+
+```lua
+local class = player:getClass()
+if class then
+    print("Player Class:", class)
+end
+```
+
+---
+
+## **hasClassWhitelist**
+
+**Description**
+
+Checks if the player has whitelisted access to a class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`int`): The class to check for whitelisting.
+
+**Returns**
+
+- **Boolean**: Whether the player has whitelisted access to the specified class.
+
+**Example**
+
+```lua
+if player:hasClassWhitelist("Medic") then
+    print("Player has access to the Medic class.")
+end
+```
+
+---
+
+## **getClassData**
+
+**Description**
+
+Retrieves the data of the player's character class.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Table|nil**: A table containing the data of the player's character class, or `nil` if not found.
+
+**Example**
+
+```lua
+local classData = player:getClassData()
+if classData then
+    print("Player Class Data:", classData.name)
+end
+```
+
+---
+
+## **WhitelistAllClasses**
+
+**Description**
+
+Whitelists all classes for the player.
+
+**Realm**
+
+- **Server**
+
+**Example**
+
+```lua
+player:WhitelistAllClasses()
+```
+
+---
+
+## **WhitelistAllFactions**
+
+**Description**
+
+Whitelists all factions for the player.
+
+**Realm**
+
+- **Server**
+
+**Example**
+
+```lua
+player:WhitelistAllFactions()
+```
+
+---
+
+## **WhitelistEverything**
+
+**Description**
+
+Whitelists everything (all classes and factions) for the player.
+
+**Realm**
+
+- **Server**
+
+**Example**
+
+```lua
+player:WhitelistEverything()
+```
+
+---
+
+## **classWhitelist**
+
+**Description**
+
+Whitelists the player for a specific class.
+
+**Realm**
+
+- **Server**
+
+**Parameters**
+
+- **class** (`int`): The class to whitelist the player for.
+
+**Example**
+
+```lua
+player:classWhitelist("Medic")
+```
+
+---
+
+## **classUnWhitelist**
+
+**Description**
+
+Removes the whitelist status for a specific class from the player.
+
+**Realm**
+
+- **Server**
+
+**Parameters**
+
+- **class** (`int`): The class to remove the whitelist status for.
+
+**Example**
+
+```lua
+player:classUnWhitelist("Medic")
+```
+
+---
+
+## **setWhitelisted**
+
+**Description**
+
+Sets whether the player is whitelisted for a faction.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+1. **faction** (`int`): The faction ID.
+2. **whitelisted** (`bool`): Whether the player should be whitelisted for the faction.
+
+**Returns**
+
+- **Boolean**: Whether the operation was successful.
+
+**Example**
+
+```lua
+player:setWhitelisted(TEAM_POLICE, true)
+```
+
+---
+
+## **IsLiliaPersistent**
+
+**Description**
+
+Checks if the entity is persistent. This function checks whether the entity is flagged as persistent.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the entity is persistent, `false` otherwise.
+
+**Example**
+
+```lua
+if entity:IsLiliaPersistent() then
+    print("Entity is persistent.")
+end
 ```
 
 ---

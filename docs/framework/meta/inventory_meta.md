@@ -14,7 +14,7 @@ Retrieves data associated with a specified key from the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -42,7 +42,7 @@ Extends the inventory to create a subclass with a specified class name.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -70,7 +70,7 @@ This function is meant to be overridden in subclasses to define specific configu
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -90,7 +90,7 @@ Adds a data proxy to the inventory for a specified key.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -115,7 +115,7 @@ Retrieves items with a specified unique ID from the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -147,7 +147,7 @@ Registers the inventory with a specified type ID.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -170,7 +170,7 @@ Creates a new instance of the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -192,7 +192,7 @@ Returns a string representation of the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -215,7 +215,7 @@ Retrieves the type of the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -238,7 +238,7 @@ Callback function called when data associated with a key changes.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -264,7 +264,7 @@ Retrieves all items in the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -289,7 +289,7 @@ Retrieves items of a specific type from the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -318,7 +318,7 @@ Retrieves the first item of a specific type from the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -347,7 +347,7 @@ Checks if the inventory contains an item of a specific type.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -377,7 +377,7 @@ Retrieves the total count of items in the inventory, optionally filtered by item
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -406,7 +406,7 @@ Retrieves the ID of the inventory.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -429,7 +429,7 @@ Checks if two inventories are equal based on their IDs.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -459,7 +459,7 @@ Adds an item to the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -487,7 +487,7 @@ Alias for the `addItem` function.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -513,7 +513,7 @@ Synchronizes the addition of an item with clients.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -535,7 +535,7 @@ Initializes the storage for the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -564,7 +564,7 @@ Restores the inventory from storage.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -582,7 +582,7 @@ Removes an item from the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -611,7 +611,7 @@ Alias for the `removeItem` function.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -639,7 +639,7 @@ Sets data associated with a key in the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -666,7 +666,7 @@ Checks if a certain action is permitted for the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -699,7 +699,7 @@ Adds an access rule to the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -730,7 +730,7 @@ Removes an access rule from the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -756,7 +756,7 @@ Retrieves the recipients for synchronization.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Returns**
 
@@ -781,7 +781,7 @@ Initializes an instance of the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -799,7 +799,7 @@ Callback function called when the inventory is loaded.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -819,7 +819,7 @@ Loads items from the database into the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Returns**
 
@@ -843,7 +843,7 @@ Callback function called when items are loaded into the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -863,7 +863,7 @@ Instantiates a new inventory instance.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -889,7 +889,7 @@ Synchronizes data changes with clients.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -912,7 +912,7 @@ Synchronizes the inventory with clients.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -934,7 +934,7 @@ Deletes the inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -952,7 +952,7 @@ Destroys the inventory and its associated items.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -970,7 +970,7 @@ Displays the inventory UI to the specified parent element.
 
 **Realm**
 
-- `Client`
+`Client`
 
 **Parameters**
 
@@ -984,6 +984,368 @@ Displays the inventory UI to the specified parent element.
 
 ```lua
 inventory:show(panel)
+```
+
+---
+
+## **getWidth**
+
+**Description**
+
+Retrieves the width of the inventory grid.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The width of the inventory grid.
+
+**Example**
+
+```lua
+local width = inventory:getWidth()
+print("Inventory Width:", width)
+```
+
+---
+
+## **getHeight**
+
+**Description**
+
+Retrieves the height of the inventory grid.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The height of the inventory grid.
+
+**Example**
+
+```lua
+local height = inventory:getHeight()
+print("Inventory Height:", height)
+```
+
+---
+
+## **getSize**
+
+**Description**
+
+Retrieves the size (width and height) of the inventory grid.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The width of the inventory grid.
+- **Integer**: The height of the inventory grid.
+
+**Example**
+
+```lua
+local width, height = inventory:getSize()
+print("Inventory Size:", width, "x", height)
+```
+
+---
+
+## **canItemFitInInventory**
+
+**Description**
+
+Checks if an item can fit in the inventory at a given position.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **item** (`Item`): The item to check.
+- **x** (`Integer`): The X position in the inventory grid.
+- **y** (`Integer`): The Y position in the inventory grid.
+
+**Returns**
+
+- **Boolean**: Whether the item can fit in the inventory.
+
+**Example**
+
+```lua
+local canFit = inventory:canItemFitInInventory(item, 2, 3)
+if canFit then
+    print("Item can fit at position (2,3).")
+else
+    print("Item cannot fit at position (2,3).")
+end
+```
+
+---
+
+## **canAdd**
+
+**Description**
+
+Checks if an item can fit within the inventory based on its size.
+
+Verifies whether the item's width and height are within the bounds of the inventory dimensions.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **item** (`String|Item`): The item to check. This can be a string representing the item type or the item object itself.
+
+**Returns**
+
+- **Boolean**: `true` if the item fits within the inventory dimensions, `false` otherwise.
+
+**Example**
+
+```lua
+local canFit = inventory:canAdd("health_pack")
+if canFit then
+    print("Health pack can be added to the inventory.")
+else
+    print("Health pack is too large for the inventory.")
+end
+```
+
+---
+
+## **doesItemOverlapWithOther**
+
+**Description**
+
+Checks if an item overlaps with another item in the inventory.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **testItem** (`Item`): The item to test for overlap.
+- **x** (`Integer`): The X position of the test item in the inventory grid.
+- **y** (`Integer`): The Y position of the test item in the inventory grid.
+- **item** (`Item`): The item to check against.
+
+**Returns**
+
+- **Boolean**: Whether the test item overlaps with the given item.
+
+**Example**
+
+```lua
+local overlaps = inventory:doesItemOverlapWithOther(testItem, 5, 5, existingItem)
+if overlaps then
+    print("Items overlap.")
+else
+    print("No overlap detected.")
+end
+```
+
+---
+
+## **doesFitInventory**
+
+**Description**
+
+Checks if an item can fit in the inventory, including within bags.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **item** (`Item`): The item to check.
+
+**Returns**
+
+- **Boolean**: Whether the item can fit in the inventory.
+
+**Example**
+
+```lua
+local canFit = inventory:doesFitInventory(item)
+if canFit then
+    print("Item can fit in the inventory or its bags.")
+else
+    print("No space available for the item.")
+end
+```
+
+---
+
+## **doesItemFitAtPos**
+
+**Description**
+
+Checks if an item fits at a specific position in the inventory.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **testItem** (`Item`): The item to check.
+- **x** (`Integer`): The X position in the inventory grid.
+- **y** (`Integer`): The Y position in the inventory grid.
+
+**Returns**
+
+- **Boolean**: Whether the item fits at the given position.
+- **Item** (optional): The item it overlaps with, if any.
+
+**Example**
+
+```lua
+local fits, overlappingItem = inventory:doesItemFitAtPos(testItem, 3, 4)
+if fits then
+    print("Item fits at position (3,4).")
+else
+    print("Item overlaps with:", overlappingItem:getID())
+end
+```
+
+---
+
+## **findFreePosition**
+
+**Description**
+
+Finds a free position in the inventory where an item can fit.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **item** (`Item`): The item to find a position for.
+
+**Returns**
+
+- **Integer|nil**: The X position in the inventory grid, or `nil` if no position is found.
+- **Integer|nil**: The Y position in the inventory grid, or `nil` if no position is found.
+
+**Example**
+
+```lua
+local x, y = inventory:findFreePosition(item)
+if x and y then
+    print("Free position found at:", x, y)
+else
+    print("No free position available for the item.")
+end
+```
+
+---
+
+## **setSize**
+
+**Description**
+
+Sets the size of the inventory grid.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **w** (`Integer`): The width of the grid.
+- **h** (`Integer`): The height of the grid.
+
+**Example**
+
+```lua
+inventory:setSize(10, 8)
+print("Inventory size set to 10x8.")
+```
+
+---
+
+## **wipeItems**
+
+**Description**
+
+Removes all items from the inventory.
+
+**Realm**
+
+`Server`
+
+**Example**
+
+```lua
+inventory:wipeItems()
+print("All items have been removed from the inventory.")
+```
+
+---
+
+## **setOwner**
+
+**Description**
+
+Sets the owner of the inventory.
+
+If the owner is a player, it sets the inventory's owner to the player's character ID.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **owner** (`Player|Integer`): The new owner of the inventory (Player object or character ID number).
+- **fullUpdate** (`Bool`, optional): Whether to sync the inventory to the client.
+
+**Example**
+
+```lua
+inventory:setOwner(player, true)
+print("Inventory owner set to player.")
+```
+
+---
+
+## **requestTransfer**
+
+**Description**
+
+Requests a transfer of an item to another inventory.
+
+**Realm**
+
+`Client`
+
+**Parameters**
+
+- **itemID** (`Integer`): The ID of the item to transfer.
+- **destinationID** (`Integer`): The ID of the destination inventory.
+- **x** (`Integer`): The X position in the destination grid.
+- **y** (`Integer`): The Y position in the destination grid.
+
+**Example**
+
+```lua
+inventory:requestTransfer(456, destinationInventoryID, 2, 3)
+print("Transfer request sent for item 456.")
 ```
 
 ---

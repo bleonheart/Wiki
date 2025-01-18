@@ -16,7 +16,7 @@ Checks if the entity is a physics prop.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -42,7 +42,7 @@ Checks if the entity is an item entity.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -66,7 +66,7 @@ Checks if the entity is a money entity.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -90,7 +90,7 @@ Checks if the entity is a simfphys car.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -114,7 +114,7 @@ Retrieves the drop position for an item associated with the entity.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -137,7 +137,7 @@ Checks if there is an entity near the current entity within a specified radius.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -167,7 +167,7 @@ Retrieves the creator of the entity.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -192,7 +192,7 @@ Assigns a creator to the entity.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -214,7 +214,7 @@ Sends a networked variable.
 
 **Realm**
 
-- **Server**~
+`Server`~
 
 **Internal:**  
 
@@ -230,6 +230,7 @@ This function is intended for internal use and should not be called directly.
 ```lua
 entity:sendNetVar("health", player)
 ```
+
 ---
 
 ## **clearNetVars**
@@ -240,7 +241,7 @@ Clears all of the networked variables.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Internal:**  
 
@@ -266,7 +267,7 @@ Sets the value of a networked variable.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -290,8 +291,8 @@ Retrieves a networked variable. If it is not set, it'll return the default that 
 
 **Realm**
 
-- **Server**
-- **Client**
+`Server`
+`Client`
 
 **Parameters**
 
@@ -307,6 +308,308 @@ Retrieves a networked variable. If it is not set, it'll return the default that 
 ```lua
 local example = entity:getNetVar("example", "Default Value")
 print(example) -- Output: "Hello World!" or "Default Value"
+```
+
+---
+
+## **checkDoorAccess**
+
+**Description**
+
+Checks if a player has access to a door.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **client** (`Player`): The player whose access is being checked.
+- **access** (`number`, optional): The access level required (defaults to `DOOR_GUEST`).
+
+**Returns**
+
+- **Boolean**: `true` if the player has the required access, `false` otherwise.
+
+**Example**
+
+```lua
+if entity:checkDoorAccess(player, DOOR_ADMIN) then
+    print("Player has access to the door.")
+else
+    print("Player does not have access to the door.")
+end
+```
+
+---
+
+## **IsLiliaPersistent**
+
+**Description**
+
+Checks if the entity is persistent.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the entity is persistent, `false` otherwise.
+
+**Example**
+
+```lua
+if entity:IsLiliaPersistent() then
+    print("Entity is persistent.")
+else
+    print("Entity is not persistent.")
+end
+```
+
+---
+
+## **keysOwn**
+
+**Description**
+
+Sets the owner of the entity. Assigns ownership of the entity to the specified player. It is intended for compatibility with DarkRP's vehicle ownership system.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **client** (`Player`): The player who will become the owner of the entity.
+
+**Example**
+
+```lua
+entity:keysOwn(player)
+```
+
+---
+
+## **keysLock**
+
+**Description**
+
+Locks the entity. Locks the entity if it is a vehicle. It is intended for compatibility with DarkRP's vehicle locking system.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+entity:keysLock()
+```
+
+---
+
+## **keysUnLock**
+
+**Description**
+
+Unlocks the entity. Unlocks the entity if it is a vehicle. It is intended for compatibility with DarkRP's vehicle unlocking system.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+entity:keysUnLock()
+```
+
+---
+
+## **getDoorOwner**
+
+**Description**
+
+Retrieves the owner of the entity. Returns the player who owns the entity if it is a vehicle. It is intended for compatibility with DarkRP's vehicle ownership system.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Player|nil**: The player who owns the entity, or `nil` if no owner is set.
+
+**Example**
+
+```lua
+local owner = entity:getDoorOwner()
+if owner then
+    print("Door is owned by:", owner:Nick())
+end
+```
+
+---
+
+## **isLocked**
+
+**Description**
+
+Checks if the door is locked.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the door is locked, `false` otherwise.
+
+**Example**
+
+```lua
+if entity:isLocked() then
+    print("The door is locked.")
+else
+    print("The door is unlocked.")
+end
+```
+
+---
+
+## **isDoorLocked**
+
+**Description**
+
+Checks if the entity is locked (pertaining to doors).
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the entity is locked, `false` otherwise.
+
+**Example**
+
+```lua
+if entity:isDoorLocked() then
+    print("Door is locked.")
+else
+    print("Door is unlocked.")
+end
+```
+
+---
+
+## **removeDoorAccessData**
+
+**Description**
+
+Removes all door access data. Clears all access data associated with the door and updates the clients.
+
+**Realm**
+
+`Server`
+
+**Internal:**  
+
+This function is intended for internal use and should not be called directly.
+
+**Example**
+
+```lua
+entity:removeDoorAccessData()
+```
+
+---
+
+## **setLocked**
+
+**Description**
+
+Sets the locked state of the door. Sets whether the door is locked or not.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **state** (`Boolean`): The new locked state of the door (`true` for locked, `false` for unlocked).
+
+**Example**
+
+```lua
+entity:setLocked(true)
+```
+
+---
+
+## **isDoor**
+
+**Description**
+
+Checks if the entity is a door.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Boolean**: `true` if the entity is a door, `false` otherwise.
+
+**Example (Server)**
+
+```lua
+if entity:isDoor() then
+    print("Entity is a door.")
+end
+```
+
+**Example (Client)**
+
+```lua
+if entity:isDoor() then
+    print("Entity is a door.")
+end
+```
+
+---
+
+## **getDoorPartner**
+
+**Description**
+
+Retrieves the partner door entity associated with this entity.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Entity|nil**: The partner door entity, if any.
+
+**Example (Server)**
+
+```lua
+local partner = entity:getDoorPartner()
+if partner then
+    print("Partner door found:", partner:GetName())
+end
+```
+
+**Example (Client)**
+
+```lua
+local partner = entity:getDoorPartner()
+if partner then
+    print("Partner door found:", partner:GetName())
+end
 ```
 
 ---

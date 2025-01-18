@@ -1,6 +1,9 @@
 ---
+title: **Character Object Documentation**
+description: Comprehensive documentation for the Character object in the Lilia game framework.
+---
 
-Contains information about a player's current game state.
+# **Character Object**
 
 Characters are a fundamental object type in Lilia. They are distinct from players, where players are the representation of a person's existence in the server that owns a character, and their character is their currently selected persona. All the characters that a player owns will be loaded into memory once they connect to the server. Characters are saved during a regular interval (`lia.config.CharacterDataSaveInterval`), and during specific events (e.g., when the owning player switches away from one character to another).
 
@@ -16,7 +19,7 @@ Provides a human-readable string representation of the character.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -39,7 +42,7 @@ Compares this character with another character for equality based on their uniqu
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -68,7 +71,7 @@ Retrieves the unique database ID of this character.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -92,7 +95,7 @@ Obtains the player object that currently owns this character.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -117,7 +120,7 @@ Checks whether the character possesses at least a specified amount of in-game cu
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -148,7 +151,7 @@ Retrieves all flags associated with this character.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -174,7 +177,7 @@ Determines if the character has one or more specified flags.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -202,7 +205,7 @@ Retrieves the currently equipped weapon of the character along with its correspo
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -232,7 +235,7 @@ Sets the complete set of flags accessible by this character, replacing any exist
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -255,7 +258,7 @@ Adds one or more flags to the character's existing set of accessible flags witho
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -278,7 +281,7 @@ Removes one or more flags from the character's set of accessible flags.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -302,7 +305,7 @@ Persists the character's current state and data to the database.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -331,7 +334,7 @@ This method handles different synchronization scenarios:
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Internal:**  
 
@@ -347,6 +350,7 @@ This function is intended for internal use and should not be called directly.
 character:sync()
 -- Syncs character data to all players
 ```
+
 ---
 
 ## **setup**
@@ -357,7 +361,7 @@ Configures the character's appearance and synchronizes this information with the
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Internal:**  
 
@@ -384,7 +388,7 @@ Forces the player to exit their current character and redirects them to the char
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -402,7 +406,7 @@ Bans the character, preventing it from being used for a specified duration or pe
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -425,7 +429,7 @@ Removes the character from the database and memory, effectively deleting it perm
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -443,7 +447,7 @@ Destroys the character instance, removing it from memory and ensuring it is no l
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -461,7 +465,7 @@ Adds or subtracts money from the character's wallet. This function adds money to
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -487,7 +491,7 @@ Specifically removes money from the character's wallet. This function ensures th
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -501,6 +505,571 @@ Specifically removes money from the character's wallet. This function ensures th
 
 ```lua
 character:takeMoney(100) -- Removes 100 from the character's wallet
+```
+
+---
+
+## **doesRecognize**
+
+**Description**
+
+Determines if this character recognizes another character based on their unique ID.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **id** (`number` | `Character`): The unique ID of the character to check recognition for. This can be either a numeric ID or a `Character` object.
+
+**Returns**
+
+- **Boolean**: `true` if the character recognizes the specified character; otherwise, `false`.
+
+**Example**
+
+```lua
+local otherCharacter = lia.char.loaded[2]
+if character:doesRecognize(otherCharacter) then
+    print("Character recognizes the other character.")
+else
+    print("Character does not recognize the other character.")
+end
+```
+
+---
+
+## **doesFakeRecognize**
+
+**Description**
+
+Determines if this character recognizes another character by a fake name based on their unique ID.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **id** (`number` | `Character`): The unique ID of the character to check fake recognition for. This can be either a numeric ID or a `Character` object.
+
+**Returns**
+
+- **Boolean**: `true` if the character recognizes the specified character by a fake name; otherwise, `false`.
+
+**Example**
+
+```lua
+local otherCharacter = lia.char.loaded[3]
+if character:doesFakeRecognize(otherCharacter) then
+    print("Character recognizes the other character by a fake name.")
+else
+    print("Character does not recognize the other character by a fake name.")
+end
+```
+
+---
+
+## **recognize**
+
+**Description**
+
+Allows the character to recognize another character, optionally under a specified fake name.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **character** (`Character` | `number`): The character to be recognized, either as a `Character` object or by their unique ID number.
+- **name** (`string`, optional): The fake name under which the character is recognized. If `nil`, the character is recognized by their actual ID.
+
+**Returns**
+
+- **Boolean**: `true` if the recognition was successful.
+
+**Example**
+
+```lua
+local targetCharacter = lia.char.loaded[4]
+character:recognize(targetCharacter, "Shadow")
+-- This sets the character to recognize targetCharacter by the fake name "Shadow"
+```
+
+---
+
+## **hasClassWhitelist**
+
+**Description**
+
+Checks if the character has whitelisted access to a specific class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`number`): The class ID to check for whitelisting.
+
+**Returns**
+
+- **Boolean**: `true` if the character has whitelist access to the specified class; otherwise, `false`.
+
+**Example**
+
+```lua
+local classID = 5
+if character:hasClassWhitelist(classID) then
+    print("Character has whitelist access to class:", classID)
+end
+```
+
+---
+
+## **isFaction**
+
+**Description**
+
+Determines if the character belongs to a specified faction.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **faction** (`string`): The name of the faction to check against.
+
+**Returns**
+
+- **Boolean**: `true` if the character belongs to the specified faction; otherwise, `false`.
+
+**Example**
+
+```lua
+if character:isFaction("Police") then
+    print("Character is a member of the Police faction.")
+end
+```
+
+---
+
+## **isClass**
+
+**Description**
+
+Determines if the character belongs to a specified class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`string`): The name of the class to check against.
+
+**Returns**
+
+- **Boolean**: `true` if the character belongs to the specified class; otherwise, `false`.
+
+**Example**
+
+```lua
+if character:isClass("Medic") then
+    print("Character is a Medic.")
+end
+```
+
+---
+
+## **WhitelistAllClasses**
+
+**Description**
+
+Grants the character whitelist access to all available classes.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+character:WhitelistAllClasses()
+-- Character now has whitelist access to every class
+```
+
+---
+
+## **WhitelistAllFactions**
+
+**Description**
+
+Grants the character whitelist access to all available factions.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+character:WhitelistAllFactions()
+-- Character now has whitelist access to every faction
+```
+
+---
+
+## **WhitelistEverything**
+
+**Description**
+
+Grants the character whitelist access to all classes and factions.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+character:WhitelistEverything()
+-- Character now has whitelist access to every class and faction
+```
+
+---
+
+## **classWhitelist**
+
+**Description**
+
+Adds a specific class to the character's whitelist, granting access to that class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`number`): The class ID to whitelist for the character.
+
+**Example**
+
+```lua
+local classID = 7
+character:classWhitelist(classID)
+-- Character now has whitelist access to class 7
+```
+
+---
+
+## **classUnWhitelist**
+
+**Description**
+
+Removes a specific class from the character's whitelist, revoking access to that class.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`number`): The class ID to remove from the character's whitelist.
+
+**Example**
+
+```lua
+local classID = 7
+character:classUnWhitelist(classID)
+-- Character no longer has whitelist access to class 7
+```
+
+---
+
+## **joinClass**
+
+**Description**
+
+Assigns the character to a specified class. Optionally forces the assignment even if conditions are not met.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **class** (`string`): The name of the class to join.
+- **isForced** (`boolean`, optional): If set to `true`, the character is forced to join the class regardless of any restrictions. Defaults to `false`.
+
+**Returns**
+
+- **Boolean**: `true` if the character successfully joined the class; otherwise, `false`.
+
+**Example**
+
+```lua
+local success = character:joinClass("Sniper", true)
+if success then
+    print("Character successfully joined the Sniper class.")
+else
+    print("Character failed to join the Sniper class.")
+end
+```
+
+---
+
+## **kickClass**
+
+**Description**
+
+Removes the character from their current class and assigns them to the default class of their faction.
+
+**Realm**
+
+`Shared`
+
+**Example**
+
+```lua
+character:kickClass()
+-- Character is now assigned to their faction's default class
+```
+
+---
+
+## **getMaxStamina**
+
+**Description**
+
+Retrieves the maximum stamina value for the character. This value can be modified by hooks or defaults to a module-defined value.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The maximum stamina value for the character.
+
+**Example**
+
+```lua
+local maxStamina = character:getMaxStamina()
+print("Character's maximum stamina:", maxStamina)
+```
+
+---
+
+## **getStamina**
+
+**Description**
+
+Retrieves the current stamina value of the character. This value can be a local variable or default to a module-defined value.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Integer**: The current stamina value of the character.
+
+**Example**
+
+```lua
+local currentStamina = character:getStamina()
+print("Character's current stamina:", currentStamina)
+```
+
+---
+
+## **getAttrib**
+
+**Description**
+
+Retrieves the value of a specific attribute for the character, including any applied boosts.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **key** (`string`): The key of the attribute to retrieve.
+- **default** (`number`, optional): The default value to return if the attribute is not found. Defaults to `0`.
+
+**Returns**
+
+- **Number**: The value of the specified attribute, including applied boosts.
+
+**Example**
+
+```lua
+local strength = character:getAttrib("strength", 10)
+print("Character's strength:", strength)
+```
+
+---
+
+## **getBoost**
+
+**Description**
+
+Retrieves the boost value for a specific attribute of the character.
+
+**Realm**
+
+`Shared`
+
+**Parameters**
+
+- **attribID** (`number`): The ID of the attribute to retrieve the boost for.
+
+**Returns**
+
+- **Number | nil**: The boost value for the specified attribute, or `nil` if no boost is found.
+
+**Example**
+
+```lua
+local strengthBoost = character:getBoost("strength")
+if strengthBoost then
+    print("Character has a strength boost of:", strengthBoost)
+else
+    print("Character has no strength boost.")
+end
+```
+
+---
+
+## **getBoosts**
+
+**Description**
+
+Retrieves all boosts applied to the character's attributes.
+
+**Realm**
+
+`Shared`
+
+**Returns**
+
+- **Table**: A table containing all boosts applied to the character's attributes.
+
+**Example**
+
+```lua
+local allBoosts = character:getBoosts()
+for attribID, boosts in pairs(allBoosts) do
+    for boostID, amount in pairs(boosts) do
+        print("Attribute:", attribID, "Boost ID:", boostID, "Amount:", amount)
+    end
+end
+```
+
+---
+
+## **updateAttrib**
+
+**Description**
+
+Updates the value of a character's attribute by adding a specified amount to it. Ensures that the attribute does not exceed its maximum allowed value.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **key** (`string`): The key of the attribute to update.
+- **value** (`number`): The amount to add to the attribute.
+
+**Example**
+
+```lua
+character:updateAttrib("agility", 5)
+-- Increases the character's agility by 5
+```
+
+---
+
+## **setAttrib**
+
+**Description**
+
+Sets the value of a character's attribute to a specified value.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **key** (`string`): The key of the attribute to set.
+- **value** (`number`): The value to set for the attribute.
+
+**Example**
+
+```lua
+character:setAttrib("intelligence", 15)
+-- Sets the character's intelligence attribute to 15
+```
+
+---
+
+## **addBoost**
+
+**Description**
+
+Adds a boost to a specific attribute of the character.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **boostID** (`string`): The ID of the boost to add.
+- **attribID** (`string`): The ID of the attribute to which the boost should be applied.
+- **boostAmount** (`number`): The amount of the boost to add to the attribute.
+
+**Returns**
+
+- **Boolean**: `true` if the boost was successfully added.
+
+**Example**
+
+```lua
+character:addBoost("buff_001", "strength", 10)
+-- Adds a boost of +10 to the character's strength attribute
+```
+
+---
+
+## **removeBoost**
+
+**Description**
+
+Removes a boost from a specific attribute of the character.
+
+**Realm**
+
+`Server`
+
+**Parameters**
+
+- **boostID** (`string`): The ID of the boost to remove.
+- **attribID** (`string`): The ID of the attribute from which the boost should be removed.
+
+**Example**
+
+```lua
+character:removeBoost("buff_001", "strength")
+-- Removes the boost "buff_001" from the character's strength attribute
 ```
 
 ---

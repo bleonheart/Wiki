@@ -20,7 +20,7 @@ Creates a new tool object with default properties. Initializes the metatable and
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -43,7 +43,7 @@ Creates client and server console variables (ConVars) for the tool based on its 
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -61,7 +61,7 @@ Retrieves server-side information for a given property by accessing the server C
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -87,7 +87,7 @@ Builds a list of client-side ConVars by appending the tool's mode prefix to each
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -112,7 +112,7 @@ Retrieves client-side information for a given property by accessing the client C
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -139,7 +139,7 @@ Retrieves a numerical value from client-side ConVars. Returns the value as a num
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -167,7 +167,7 @@ Checks if the tool is allowed on the server based on the server ConVar `AllowedC
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -193,7 +193,7 @@ Placeholder for initializing the tool. Intended to be overridden if initializati
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -213,7 +213,7 @@ Retrieves the current mode of the tool, which is a string representing the speci
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -236,7 +236,7 @@ Retrieves the SWEP (Scripted Weapon) associated with the tool.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -259,7 +259,7 @@ Retrieves the owner of the tool by accessing the SWEP's `Owner` property.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -282,7 +282,7 @@ Retrieves the weapon associated with the tool by accessing the SWEP's `Weapon` p
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -305,7 +305,7 @@ Handles the left-click action with the tool. Intended to be overridden to define
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -330,7 +330,7 @@ Handles the right-click action with the tool. Intended to be overridden to defin
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -355,7 +355,7 @@ Handles the reload action with the tool. Clears the objects that the tool is cur
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -375,7 +375,7 @@ Deploys the tool when the player equips it. Releases any ghost entities associat
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -396,7 +396,7 @@ Holsters the tool when the player unequips it. Releases any ghost entities assoc
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -417,7 +417,7 @@ Handles the tool's "think" logic. Called periodically to perform updates. By def
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -437,7 +437,7 @@ Checks the validity of objects the tool is manipulating. Iterates over the tool'
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -455,7 +455,7 @@ Clears all objects the tool is manipulating. Removes all objects from the tool's
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -473,7 +473,7 @@ Releases any ghost entities associated with the tool. Removes any ghost entities
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 

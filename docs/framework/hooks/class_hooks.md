@@ -39,7 +39,7 @@ Triggered when a player leaves the current class and joins a different one. This
 
 **Realm**
 
-- `Server`
+`Server`
 
 **Parameters**
 
@@ -67,7 +67,7 @@ Called when a player successfully joins a class. Use this hook to initialize cla
 
 **Realm**
 
-- `Server`
+`Server`
 
 **Parameters**
 
@@ -94,7 +94,7 @@ Invoked when a player in the class spawns into the world. This hook is useful fo
 
 **Realm**
 
-- `Server`
+`Server`
 
 **Parameters**
 

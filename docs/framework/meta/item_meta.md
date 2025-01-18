@@ -16,7 +16,7 @@ Compares this item with another item for equality based on their unique IDs.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -49,7 +49,7 @@ Generates a human-readable string representation of the item.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -73,7 +73,7 @@ Retrieves the quantity of this item. For items with `id == 0`, it returns the `m
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -97,7 +97,7 @@ Gets this item's database ID, which is guaranteed to be unique.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -120,7 +120,7 @@ Returns the model path for this item.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -143,7 +143,7 @@ Retrieves the skin index used by this item (if any).
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -166,7 +166,7 @@ Returns the price of the item. If a `calcPrice` method exists on the item, it is
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -190,7 +190,7 @@ Invokes one of the item's methods dynamically. Sets `self.player` and `self.enti
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -220,7 +220,7 @@ Retrieves the player who currently owns this item, if any. Ownership is determin
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -248,7 +248,7 @@ Retrieves a stored data value from the item's internal `data` table (or from the
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -277,7 +277,7 @@ Combines and returns all stored data from this item, including data from its ent
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Returns**
 
@@ -301,7 +301,7 @@ Assigns a function to be executed when a particular event (hook) occurs on this 
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -327,7 +327,7 @@ Assigns a function to be executed after a particular hook runs.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -353,7 +353,7 @@ Called when the item is registered. Useful for post-registration tasks.
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -373,7 +373,7 @@ Utility function to print basic item info (and optionally details like owner and
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Parameters**
 
@@ -397,7 +397,7 @@ Utility function that prints all stored data related to this item. Useful for de
 
 **Realm**
 
-- **Shared**
+`Shared`
 
 **Example**
 
@@ -410,15 +410,13 @@ item:printData()
 
 ## **getName**
 
-> **Note**: Defined for both **server** and **client** realms (with slight variations).
-
 **Description**
 
 Retrieves the name of the item. On the server, it returns `ITEM.name` directly; on the client, it may be localized.
 
 **Realm**
 
-- **Server** (or **client**, or **Shared** depending on usage)
+`Server` (or `Client`, or `Shared` depending on usage)
 
 **Returns**
 
@@ -435,15 +433,13 @@ print("Item name:", item:getName())
 
 ## **getDesc**
 
-> **Note**: Defined for both **server** and **client** realms.
-
 **Description**
 
 Retrieves the description of the item. On the server, returns `ITEM.desc` directly; on the client, may be localized.
 
 **Realm**
 
-- **Server** (or **client**, or **Shared**)
+`Server` (or `Client` or `Shared`)
 
 **Returns**
 
@@ -466,7 +462,7 @@ Removes this item from its current inventory. Optionally, the removal can preser
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -495,7 +491,7 @@ Deletes the item from the database (and memory). After calling this, the item no
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Returns**
 
@@ -520,7 +516,7 @@ Removes the item from the game world, its inventory, and then proceeds to delete
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Returns**
 
@@ -545,7 +541,7 @@ Destroys the item instance in memory and notifies connected clients to remove th
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -565,7 +561,7 @@ Called when the item is disposed (i.e., destroyed and removed from memory).
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -585,7 +581,7 @@ Finds the corresponding world entity (`ents.FindByClass("lia_item")`) for this i
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Returns**
 
@@ -613,7 +609,7 @@ Spawns this item into the game world as a physical entity. If an entity already 
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -642,7 +638,7 @@ Moves this item to another inventory.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -676,7 +672,7 @@ Called when the item is created/instanced. Useful for performing operations righ
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -696,7 +692,7 @@ Called when the item data is synced to a specific recipient or broadcast to all 
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -724,7 +720,7 @@ Called when the item is removed from the database (e.g., after a full delete).
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -744,7 +740,7 @@ Called when the item is restored (for instance, from a saved database state).
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Example**
 
@@ -764,7 +760,7 @@ Synchronizes this item's data with one or more players. If `recipient` is `nil`,
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -790,7 +786,7 @@ Sets or updates a key-value pair within the item's data table, optionally update
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -821,7 +817,7 @@ Adds a specified amount to this item's current quantity.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -846,7 +842,7 @@ Directly sets the quantity for this item to a specified value.
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 
@@ -871,7 +867,7 @@ Handles an interaction action (e.g. `"use"`, `"drop"`, etc.) performed by a play
 
 **Realm**
 
-- **Server**
+`Server`
 
 **Parameters**
 

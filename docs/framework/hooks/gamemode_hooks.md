@@ -11,8 +11,8 @@ Below is a comprehensive list of available hooks and their purposes. Internal ho
 **Description:**  
 Called when creating a default inventory for a character. Should return a [deferred](https://github.com/Be1zebub/luassert-deferred) (or similar promise) object that resolves with the new inventory.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Example:**
 ```lua
@@ -39,8 +39,8 @@ end)
 **Description:**  
 Called after a character has been restored from the database. Useful for post-restoration logic such as awarding default items or setting up data.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Example:**
 ```lua
@@ -58,8 +58,8 @@ end)
 **Description:**  
 Called before a character is deleted. Allows for clean-up tasks or checks before removal from DB.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `id` (`number`): The ID of the character to be deleted.
@@ -80,8 +80,8 @@ end)
 **Description:**  
 Called after a character is deleted. Finalize any remaining actions or remove associated data.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`): The player who triggered the deletion.
@@ -101,8 +101,8 @@ end)
 **Description:**  
 Called when a character variable changes (server-side). Useful for responding to data updates.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `character` (Character): The character object.
@@ -126,8 +126,8 @@ end)
 **Description:**  
 Called when a player's model changes.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`): The player whose model changed.
@@ -147,8 +147,8 @@ end)
 **Description:**  
 Retrieves a default name for a character during creation. Return `(defaultName, overrideBool)`.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`): The player creating the character.
@@ -173,8 +173,8 @@ end)
 **Description:**  
 Retrieves a default description for a character during creation. Return `(defaultDesc, overrideBool)`.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -198,8 +198,8 @@ end)
 **Description:**  
 Determines whether all HUD bars should be hidden.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**
 - `bool|nil`: `true` to hide, `nil` to allow rendering.
@@ -218,8 +218,8 @@ end)
 **Description:**  
 Determines whether a specific HUD bar should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `barName` (`string`): e.g. `"health"`, `"armor"`.
@@ -241,8 +241,8 @@ end)
 **Description:**  
 Called once all chat classes have been initialized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -262,8 +262,8 @@ end)
 **Description:**  
 Called before a chat message is sent. Return `false` to cancel, or modify the message if returning a string.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `speaker` (`Player`)
@@ -288,8 +288,8 @@ end)
 **Description:**  
 Determines whether a player can join a certain class. Return `false` to block.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -313,8 +313,8 @@ end)
 **Description:**  
 Called after all classes have been initialized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -334,8 +334,8 @@ end)
 **Description:**  
 Determines if a player can use a specific command. Return `false` to block usage.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -359,8 +359,8 @@ end)
 **Description:**  
 Determines whether data should be saved during server shutdown.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Returns:**  
 - `bool`: `true` to save, `false` to skip.
@@ -379,8 +379,8 @@ end)
 **Description:**  
 Called after all data has been loaded.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -399,8 +399,8 @@ end)
 **Description:**  
 Saves all relevant data to disk, triggered during map cleanup and shutdown.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -420,8 +420,8 @@ end)
 **Description:**  
 Loads all relevant data from disk, typically after map cleanup.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -446,8 +446,8 @@ end)
 **Description:**  
 Called when MySQLOO successfully connects to the database. Use to register prepared statements or init DB logic.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -463,8 +463,8 @@ end)
 **Description:**  
 Called after all essential DB tables have been loaded.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -480,8 +480,8 @@ end)
 **Description:**  
 Called before the faction tables are loaded. Good spot for data setup prior to factions being processed.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -497,8 +497,8 @@ end)
 **Description:**  
 Called to save persistent data (like map entities), often during map cleanup or shutdown.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Usage Example:**
 ```lua
@@ -517,8 +517,8 @@ end)
 **Description:**  
 Called for registering DB prepared statements post-MySQLOO connection.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Usage Example:**
 ```lua
@@ -534,8 +534,8 @@ end)
 **Description:**  
 Used during character cleanup routines for additional steps when removing or transitioning a character.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `character`: The character being cleaned up.
@@ -558,8 +558,8 @@ end)
 **Description:**  
 Client-side call when creating the graphical representation of an inventory.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**  
 - `inventory`
@@ -599,8 +599,8 @@ end)
 **Description:**  
 Called after an item has been registered. Useful for customizing item behavior or adding properties.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**  
 - `item` (Item)
@@ -627,8 +627,8 @@ end)
 **Description:**  
 Called once all item modules have been loaded from a directory.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -651,8 +651,8 @@ end)
 **Description:**  
 Called whenever a new log message is added. Allows for custom logic or modifications to log handling.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**  
 - `client` (`Player`)
@@ -679,8 +679,8 @@ end)
 **Description:**  
 Called when modules include submodules. Useful for advanced module handling or dependency management.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**  
 - `path` (`string`)
@@ -700,8 +700,8 @@ end)
 **Description:**  
 Called after a module finishes loading. Ideal for final logic once all module files are processed.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**  
 - `path` (`string`): The file path.
@@ -723,8 +723,8 @@ end)
 **Description:**  
 Called after the schema has finished initializing.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -739,8 +739,8 @@ end)
 **Description:**  
 Called after all modules are fully initialized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -755,8 +755,8 @@ end)
 **Description:**  
 Called when a player picks up money from the ground.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**  
 - `client` (`Player`)
@@ -777,8 +777,8 @@ end
 **Description:**  
 Called whenever an item entity spawns in the world. Use `entity:getItemTable()` to access item data.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -800,8 +800,8 @@ end)
 **Description:**  
 Loads custom fonts for the client.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `font` (`string`)
@@ -832,8 +832,8 @@ end
 **Description:**  
 Used internally to load core fonts. Override only if you understand the implications.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `font` (`string`)
@@ -856,8 +856,8 @@ end
 **Description:**  
 Called when `lia.config` is fully initialized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -876,8 +876,8 @@ end
 **Description:**  
 Called when a module has finished loading (post-load logic).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Example:**
 ```lua
@@ -895,8 +895,8 @@ Indicates successful MySQLOO DB connection. Used internally.
 **Internal:**  
 This function is intended for internal use and should not be called directly.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -912,8 +912,8 @@ end
 **Description:**  
 Called after wiping tables in the DB, typically after major resets/cleanups.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -932,8 +932,8 @@ Used internally by Lilia to set up the database.
 **Internal:**  
 This function is intended for internal use and should not be called directly.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Example:**
 ```lua
@@ -950,8 +950,8 @@ end
 **Description:**  
 Determines whether a player can unequip a given item.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -975,8 +975,8 @@ end
 **Description:**  
 Determines if a player is allowed to drop a specific item.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1000,8 +1000,8 @@ end
 **Description:**  
 Determines if a player can pick up an item into their inventory.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1025,8 +1025,8 @@ end
 **Description:**  
 Determines if a player can equip a given item (e.g., outfits, weapons).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1050,8 +1050,8 @@ end
 **Description:**  
 Determines if a player can interact with an item (pick up, drop, transfer, etc.). Called after other checks.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1076,8 +1076,8 @@ end
 **Description:**  
 Called when an entity is removed. Often used for cleaning up net variables.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**  
 - `entity` (`Entity`)
@@ -1097,8 +1097,8 @@ end)
 **Description:**  
 Called when a player initially spawns on the server. Used to sync net vars or send data to the client.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1119,8 +1119,8 @@ end)
 **Description:**  
 Called after a player has fully initialized (post-initial-spawn logic).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1138,8 +1138,8 @@ end)
 **Description:**  
 Called when Lilia has finished loading all its data for a player (e.g., characters, inventories).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1158,8 +1158,8 @@ end)
 **Description:**  
 Called when a player disconnects while having a valid character. Often used for partial saves or cleanups.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1178,8 +1178,8 @@ end)
 **Description:**  
 Determines if a client ragdoll should spawn (e.g., on death or fallover).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1201,8 +1201,8 @@ end)
 **Description:**  
 Called when a player attempts to use an entity recognized as a door or player.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1223,8 +1223,8 @@ end)
 **Description:**  
 Determines if a particular menu button should appear (e.g., character creation).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `buttonName` (`string`)
@@ -1247,8 +1247,8 @@ end)
 **Description:**  
 Called when an item entity is *created* in the world (different from *OnItemSpawned*).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `itemTable` (`table`)
@@ -1270,8 +1270,8 @@ end)
 **Description:**  
 Returns an alternate model path for a dropped item instead of the default.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `itemTable` (`table`)
@@ -1294,8 +1294,8 @@ end)
 **Description:**  
 Triggered when the client sends a request to transfer an item from one inventory slot to another.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1321,8 +1321,8 @@ end)
 **Description:**  
 Configure or override rules for a *bag* inventory (e.g., restricting categories).
     
-**Realm:**  
-Server or Shared
+**Realm:** 
+`Server` or `Shared`
     
 **Parameters:**
 - `inventory` (Inventory)
@@ -1340,8 +1340,8 @@ end)
 **Description:**  
 Determines if a player can pick up a money entity from the ground.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `activator` (`Player`)
@@ -1364,8 +1364,8 @@ end)
 **Description:**  
 Returns a custom model path for a money entity based on its amount.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `amount` (`number`)
@@ -1391,8 +1391,8 @@ end)
 **Description:**  
 Determines whether an outfit item can change the player’s model.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `item` (Item)
@@ -1415,8 +1415,8 @@ end
 **Description:**  
 Called when a character is permanently killed.
     
-**Realm:**  
-Server or Shared
+**Realm:** 
+`Server` or `Shared`
     
 **Parameters:**
 - `character` (Character)
@@ -1436,8 +1436,8 @@ end)
 **Description:**  
 Called when the system attempts to combine one item with another in an inventory.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1467,8 +1467,8 @@ end)
 **Description:**  
 Called when a character ragdolls or “falls over.”
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1493,8 +1493,8 @@ end)
 **Description:**  
 Allows modifying or adding extra data steps in the character creation process (server side).
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1515,8 +1515,8 @@ end)
 **Description:**  
 Called when the character list for a player is updated (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `oldCharList` (`table`)
@@ -1542,8 +1542,8 @@ end)
 **Description:**  
 Allows schemas/modules to insert or modify steps in the char creation UI (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel` (`Panel`)
@@ -1567,8 +1567,8 @@ end)
 **Description:**  
 Checks if a character can be deleted before the UI or server attempts it.
     
-**Realm:**  
-Client or Shared
+**Realm:** 
+`Client` or `Shared`
     
 **Parameters:**
 - `charID` (`number`)
@@ -1592,8 +1592,8 @@ end)
 **Description:**  
 Called when a player is forcibly kicked from their current character.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `id` (`number`): The character ID
@@ -1615,8 +1615,8 @@ end)
 **Description:**  
 Called when Lilia’s client-side scripts have fully loaded.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -1631,8 +1631,8 @@ end)
 **Description:**  
 Called when a vendor’s allowed classes are updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1658,8 +1658,8 @@ end)
 **Description:**  
 Called when a vendor’s allowed factions are updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1685,8 +1685,8 @@ end)
 **Description:**  
 Called when a vendor’s item max stock is updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1712,8 +1712,8 @@ end)
 **Description:**  
 Called when a vendor’s item stock is updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1739,8 +1739,8 @@ end)
 **Description:**  
 Called when a vendor’s item mode is updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1766,8 +1766,8 @@ end)
 **Description:**  
 Called when a vendor’s item price is updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1793,8 +1793,8 @@ end)
 **Description:**  
 Called when a vendor’s money is updated.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1820,8 +1820,8 @@ end)
 **Description:**  
 Called after a delay when a vendor’s data is edited.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1843,8 +1843,8 @@ end)
 **Description:**  
 Called when a player attempts to trade with a vendor.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Internal:**  
 This function is intended for internal use and should not be called directly.
@@ -1870,8 +1870,8 @@ end)
 **Description:**  
 Called when vendor synchronization data is received.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `vendor` (`Entity`)
@@ -1892,8 +1892,8 @@ end)
 **Description:**  
 Determines whether a player can access a vendor.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1918,8 +1918,8 @@ end)
 **Description:**  
 Called when a character trades with a vendor.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -1946,8 +1946,8 @@ end)
 **Description:**  
 Called when a player exits from interacting with a vendor.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -1965,8 +1965,8 @@ end)
 **Description:**  
 Called when a vendor is opened (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `vendor` (`Entity`)
@@ -1985,8 +1985,8 @@ end)
 **Description:**  
 Called when the vendor menu is opened.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `self` (`Entity`): The vendor
@@ -2007,8 +2007,8 @@ end)
 **Description:**  
 Called after `PlayerLoadout` is executed, specifically for faction loadout.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2030,8 +2030,8 @@ end)
 **Description:**  
 Called after `FactionOnLoadout` is executed, specifically for class loadout.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2055,8 +2055,8 @@ end)
 **Description:**  
 Called after `ClassOnLoadout`, for extra faction loadout logic.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2077,8 +2077,8 @@ end)
 **Description:**  
 Called after `FactionPostLoadout`, for extra class loadout logic.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2099,8 +2099,8 @@ end)
 **Description:**  
 Called after all player loadout hooks (PlayerLoadout, FactionOnLoadout, ClassOnLoadout) have finished.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2119,8 +2119,8 @@ end)
 **Description:**  
 Called when the text in the chat input box changes.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `text` (`string`)
@@ -2139,8 +2139,8 @@ end)
 **Description:**  
 Called when the chat input box is closed.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2155,8 +2155,8 @@ end)
 **Description:**  
 Called to add text to the chat. Allows formatting or modifying text before display.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `text` (`string`) — the markup
@@ -2178,8 +2178,8 @@ end)
 **Description:**  
 Called when the chat input box is opened.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2194,8 +2194,8 @@ end)
 **Description:**  
 Called after a player sends a chat message.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2216,8 +2216,8 @@ end)
 **Description:**  
 Called after a player sends a chat message.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2243,8 +2243,8 @@ end)
 **Description:**  
 Determines whether certain information can be displayed in the character info panel of the F1 menu.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `suppress` (table)  
@@ -2266,8 +2266,8 @@ end
 *(Alias for F1 menu usage.)*  
 Determines if a player is allowed to open/view their inventory from F1 menu.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**  
 - `bool`
@@ -2287,8 +2287,8 @@ end)
 **Description:**  
 Called when the help menu is being built.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `tabs` (table): Contains help menu tabs.
@@ -2309,8 +2309,8 @@ end)
 **Description:**  
 Creates menu buttons for the F1 menu.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `tabs` (table)
@@ -2334,8 +2334,8 @@ end)
 **Description:**  
 Whether or not the ammo HUD should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `weapon` (Entity or table)
@@ -2356,8 +2356,8 @@ end)
 **Description:**  
 Determines whether character info should be drawn for the given entity/character.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -2382,8 +2382,8 @@ end)
 **Description:**  
 Determines whether entity info should be drawn for the given entity.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -2406,8 +2406,8 @@ end)
 **Description:**  
 Draws information about the given entity.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -2428,8 +2428,8 @@ end)
 **Description:**  
 Draws the crosshair (if `ShouldDrawCrosshair` is `true`).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2447,8 +2447,8 @@ end)
 **Description:**  
 Determines whether the vignette effect should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**  
 - `bool`
@@ -2468,8 +2468,8 @@ end)
 **Description:**  
 Draws the vignette effect.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2485,8 +2485,8 @@ end)
 **Description:**  
 Determines whether a branching path warning should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**  
 - `bool`
@@ -2506,8 +2506,8 @@ end)
 **Description:**  
 Draws a branching path warning.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2522,8 +2522,8 @@ end)
 **Description:**  
 Determines whether the blur effect should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**  
 - `bool`
@@ -2543,8 +2543,8 @@ end)
 **Description:**  
 Draws the blur effect.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Example:**
 ```lua
@@ -2562,8 +2562,8 @@ end)
 **Description:**  
 Determines whether player information should be drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Returns:**  
 - `bool`
@@ -2583,8 +2583,8 @@ end)
 **Description:**  
 Initializes the tooltip before it is displayed.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel` (tooltip panel)
@@ -2604,8 +2604,8 @@ end)
 **Description:**  
 Handles painting of the tooltip.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel`
@@ -2626,8 +2626,8 @@ end)
 **Description:**  
 Handles layout of the tooltip.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel`
@@ -2647,8 +2647,8 @@ end)
 **Description:**  
 Adjusts the amount of blur applied to the screen.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `blurGoal` (`int`)
@@ -2671,8 +2671,8 @@ end)
 **Description:**  
 Sets up the quick menu by adding buttons, sliders, etc. Called during the panel’s initialization.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel` (the quick menu panel)
@@ -2696,8 +2696,8 @@ end)
 **Description:**  
 Called to draw additional content within a model view panel.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel`
@@ -2718,8 +2718,8 @@ end)
 **Description:**  
 Determines if a player should be shown on the scoreboard.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2742,8 +2742,8 @@ end)
 **Description:**  
 Provides options for the player context menu on the scoreboard.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2768,8 +2768,8 @@ end)
 **Description:**  
 Determines whether a scoreboard value should be overridden (e.g., name, desc).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2792,8 +2792,8 @@ end)
 **Description:**  
 Called when a player tries to use abilities on the door (locking, etc.).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2818,8 +2818,8 @@ end)
 **Description:**  
 Called when a player purchases or sells a door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2847,8 +2847,8 @@ end)
 **Description:**  
 Called when a player attempts to use a door entity.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2873,8 +2873,8 @@ end)
 **Description:**  
 Called when a player attempts to lock a door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `owner` (`Player`)
@@ -2895,8 +2895,8 @@ end)
 **Description:**  
 Called when a player attempts to unlock a door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `owner` (`Player`)
@@ -2917,8 +2917,8 @@ end)
 **Description:**  
 Toggles the lock state of a door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -2940,8 +2940,8 @@ end)
 **Description:**  
 Calls a function on all child entities of a door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -2962,8 +2962,8 @@ end)
 **Description:**  
 Copies the parent door's properties to a child door.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `child` (`Entity`)
@@ -2985,8 +2985,8 @@ end)
 **Description:**  
 Determines if saved items should be deleted on server restart.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Returns:**  
 - `bool`
@@ -3006,8 +3006,8 @@ end)
 **Description:**  
 Called after saved items are loaded from the database.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `loadedItems` (table): Contains loaded item entities.
@@ -3028,8 +3028,8 @@ end)
 **Description:**  
 Checks if third-person view is allowed or disabled.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3051,8 +3051,8 @@ end)
 **Description:**  
 Called when a character’s attribute is updated.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3074,8 +3074,8 @@ end)
 **Description:**  
 Called when a player gains stamina.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3093,8 +3093,8 @@ end)
 **Description:**  
 Called when a player loses stamina.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3114,8 +3114,8 @@ end)
 **Description:**  
 Determines if a player can throw a punch.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3138,8 +3138,8 @@ end)
 **Description:**  
 Adjusts stamina offset when a player is running.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3163,8 +3163,8 @@ end)
 **Description:**  
 Adjusts the rate at which a player regenerates stamina.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3188,8 +3188,8 @@ end)
 **Description:**  
 Adjusts the stamina offset otherwise (generic hook).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3213,8 +3213,8 @@ end)
 **Description:**  
 Calculates the change in a player’s stamina (positive or negative).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3241,8 +3241,8 @@ end)
 **Description:**  
 Checks if a player is allowed to view their attributes.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3265,8 +3265,8 @@ end)
 **Description:**  
 Retrieves the initial number of attribute points a player starts with.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3290,8 +3290,8 @@ end)
 **Description:**  
 Determines if a player can pick up an item with their hands.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3315,8 +3315,8 @@ end)
 **Description:**  
 Determines the maximum stamina for a character.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `character` (Character)
@@ -3343,8 +3343,8 @@ end)
 **Description:**  
 Called after the player's inventory is drawn.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `panel` (inventory panel)
@@ -3362,8 +3362,8 @@ end)
 **Description:**  
 Called when a player clicks on an item icon.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `self` (panel)
@@ -3386,8 +3386,8 @@ end)
 **Description:**  
 Called when an item transfer is requested (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `self` (panel)
@@ -3409,8 +3409,8 @@ end)
 **Description:**  
 Called when an item is being painted over in the inventory.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `self` (panel)
@@ -3434,8 +3434,8 @@ end)
 **Description:**  
 Called when an item interaction menu is created (e.g., right-click menu).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `self` (panel)
@@ -3459,8 +3459,8 @@ end)
 **Description:**  
 Determines if a specific action can be run on an item.
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `itemTable` (table)
@@ -3484,8 +3484,8 @@ end)
 **Description:**  
 Determines whether an item can be transferred between inventories.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `item` (Item)
@@ -3510,8 +3510,8 @@ end)
 **Description:**  
 Called when an item is dragged out of an inventory.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3530,8 +3530,8 @@ end)
 **Description:**  
 Called when an item is transferred between inventories.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `context` (table)
@@ -3553,8 +3553,8 @@ end)
 **Description:**  
 Called when a player drops a stackable item.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `itemTypeOrItem`
@@ -3573,8 +3573,8 @@ end)
 **Description:**  
 Whether a player is allowed to spawn a container entity.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3600,8 +3600,8 @@ end)
 **Description:**  
 Determines whether an entity is suitable for use as storage (e.g., a trunk).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3621,8 +3621,8 @@ end)
 **Description:**  
 Called when a storage panel is created (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `localInvPanel` (panel)
@@ -3646,8 +3646,8 @@ end)
 **Description:**  
 Determines whether data associated with a storage entity should be saved.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3671,8 +3671,8 @@ end)
 **Description:**  
 Called when a storage entity is restored.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `storage` (`Entity`)
@@ -3691,8 +3691,8 @@ end)
 **Description:**  
 Called when a storage is opened (car trunk or other).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3715,8 +3715,8 @@ end)
 **Description:**  
 Called when a prompt to unlock storage is displayed (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3754,8 +3754,8 @@ end)
 **Description:**  
 Determines whether a player can transfer an item into storage.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3780,8 +3780,8 @@ end)
 **Description:**  
 Called when a storage entity is removed.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3800,8 +3800,8 @@ end)
 **Description:**  
 Called when the inventory of a storage entity is set.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3827,8 +3827,8 @@ end)
 **Description:**  
 Checks if a character is recognized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `character` (Character)
@@ -3852,8 +3852,8 @@ end)
 **Description:**  
 Checks if a character is *fake* recognized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `character` (Character)
@@ -3877,8 +3877,8 @@ end)
 **Description:**  
 Checks if a fake name exists in a given name list.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `name` (string)
@@ -3904,8 +3904,8 @@ end)
 **Description:**  
 Called when a character is recognized.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3928,8 +3928,8 @@ end)
 **Description:**  
 Initiates a character recognition process (client side).
     
-**Realm:**  
-Client
+**Realm:** 
+`Client`
     
 **Parameters:**
 - `level` (int)
@@ -3949,8 +3949,8 @@ end)
 **Description:**  
 Retrieves the displayed description of an entity (HUD or otherwise).
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `entity` (`Entity`)
@@ -3974,8 +3974,8 @@ end)
 **Description:**  
 Retrieves a displayed name for a client/character in a recognition context.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -3998,8 +3998,8 @@ end)
 **Description:**  
 Determines if a chat type is recognized by the recognition system.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `chatType` (string)
@@ -4020,8 +4020,8 @@ end)
 **Description:**  
 Retrieves the salary limit for a player.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4047,8 +4047,8 @@ end)
 **Description:**  
 Retrieves the amount of salary a player should receive.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4072,8 +4072,8 @@ end)
 **Description:**  
 Determines if a player is allowed to earn salary.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4098,8 +4098,8 @@ end)
 **Description:**  
 Creates a timer to manage player salary.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4124,8 +4124,8 @@ end)
 **Description:**  
 Checks if a player is allowed to use a specific character.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4150,8 +4150,8 @@ end)
 **Description:**  
 Whether a player can create a new character.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4176,8 +4176,8 @@ end)
 **Description:**  
 Called after a character is deleted.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4196,8 +4196,8 @@ end)
 **Description:**  
 Retrieves the max number of characters a player can have.
     
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4222,8 +4222,8 @@ end)
 **Description:**  
 Called after a character is deleted.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4242,8 +4242,8 @@ end)
 **Description:**  
 Called before a player's character is loaded.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4265,8 +4265,8 @@ end)
 **Description:**  
 Called when a player's character is loaded.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4287,8 +4287,8 @@ end)
 **Description:**  
 Called after a player's character is loaded.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `client` (`Player`)
@@ -4309,8 +4309,8 @@ end)
 **Description:**  
 Called after a character has been successfully loaded (sometimes shared realm usage).
     
-**Realm:**  
-Shared or Server
+**Realm:** 
+`Shared` or `Server`
     
 **Parameters:**
 - `character` (Character)
@@ -4328,8 +4328,8 @@ end)
 **Description:**  
 Called after a character is saved.
     
-**Realm:**  
-Server
+**Realm:** 
+`Server`
     
 **Parameters:**
 - `character` (Character)
@@ -4347,8 +4347,8 @@ end)
 **Description:**  
 Called before a character is saved.
     
-**Realm:**  
-Shared (or Server, depending on code)
+**Realm:** 
+`Shared` (or `Server`, depending on the usage)
     
 **Parameters:**
 - `character` (Character)
@@ -4383,8 +4383,8 @@ end)
 **Description:**  
 Called when adding a new section to the F1 menu. Allows customization of sections within the help or character menu.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Parameters:**
 - `sectionName` (`string`): The name identifier of the section.
@@ -4408,8 +4408,8 @@ end)
 **Description:**  
 Called when adding a text field to a section in the F1 menu. Allows adding customizable input fields to the menu.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Parameters:**
 - `sectionName` (`string`): The name identifier of the section to add the text field to.
@@ -4440,8 +4440,8 @@ end)
 **Description:**  
 Called when adding a bar field (e.g., progress bar) to a section in the F1 menu. Allows adding customizable visual bars to represent data like health, stamina, etc.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Parameters:**
 - `sectionName` (`string`): The name identifier of the section to add the bar field to.
@@ -4480,8 +4480,8 @@ end)
 **Description:**  
 Determines if a player is allowed to view the list of available commands. Return `false` to hide the commands.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Returns:**
 - `bool`: `false` to block, `nil` or `true` to allow.
@@ -4501,8 +4501,8 @@ end)
 **Description:**  
 Called when the character list has been fully loaded for a player. Useful for performing actions after all characters are available.
 
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Parameters:**
 - `newCharList` (`table`): The updated list of characters for the player.
@@ -4521,8 +4521,8 @@ end)
 **Description:**  
 Determines if a player can switch from their current character to another character. Return `false` to prevent the switch.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `client` (`Player`): The player attempting to switch characters.
@@ -4548,8 +4548,8 @@ end)
 **Description:**  
 Called after a new character has been successfully created. Allows for additional setup or initialization of the new character.
 
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Parameters:**
 - `client` (`Player`): The player who created the character.
@@ -4572,8 +4572,8 @@ end)
 **Description:**  
 Allows modifying or adding extra data steps in the character creation process on the server side. Can be used to inject custom data into character creation.
 
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Parameters:**
 - `client` (`Player`): The player creating the character.
@@ -4595,8 +4595,8 @@ end)
 **Description:**  
 Called to draw information about a character, such as stats or status effects, within the UI.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Parameters:**
 - `entity` (`Entity`): The entity associated with the character.
@@ -4618,8 +4618,8 @@ end)
 **Description:**  
 Called to retrieve the text displayed when a player is injured. Allows customization of injury messages.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `client` (`Player`): The player who is injured.
@@ -4645,8 +4645,8 @@ end)
 **Description:**  
 Called to retrieve the display name for a weapon. Allows customization of weapon names in the UI.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `weapon` (`Entity` or `table`): The weapon entity or table for which the name is being retrieved.
@@ -4669,8 +4669,8 @@ end)
 **Description:**  
 Called when a player cycles through their weapons, allowing custom sounds to be played.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - None directly, but could include context in some implementations.
@@ -4692,8 +4692,8 @@ end)
 **Description:**  
 Determines if a player is allowed to choose a specific weapon. Return `false` to block weapon selection.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `weapon` (`Entity` or `table`): The weapon being selected.
@@ -4716,8 +4716,8 @@ end)
 **Description:**  
 Called when a weapon is selected, allowing custom sounds to be played.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `weapon` (`Entity` or `table`): The weapon being selected.
@@ -4740,8 +4740,8 @@ end)
 **Description:**  
 Determines if a player is allowed to use a door entity, such as opening, locking, or unlocking. Return `false` to prevent the action.
 
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Parameters:**
 - `client` (`Player`): The player attempting to use the door.
@@ -4766,8 +4766,8 @@ end)
 **Description:**  
 Called when a player accesses a vendor. Useful for tracking access or applying additional logic upon access.
 
-**Realm:**  
-Server
+**Realm:** 
+`Server`
 
 **Parameters:**
 - `activator` (`Player`): The player accessing the vendor.
@@ -4788,8 +4788,8 @@ end)
 **Description:**  
 Gets the price override for an item in a vendor's inventory. Allows dynamic pricing based on item, vendor, or other conditions.
 
-**Realm:**  
-Shared
+**Realm:** 
+`Shared`
 
 **Parameters:**
 - `vendor` (`Entity`): The vendor entity.
@@ -4819,8 +4819,8 @@ end)
 **Description:**  
 Called when third-person mode is toggled on or off. Allows for custom handling of third-person mode changes.
 
-**Realm:**  
-Client
+**Realm:** 
+`Client`
 
 **Parameters:**
 - `state` (`bool`): `true` if third-person is enabled, `false` if disabled.
