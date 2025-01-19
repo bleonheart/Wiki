@@ -6,7 +6,7 @@ Registration, parsing, and handling of commands.
 
 Commands can be run through the chat with slash commands or they can be executed through the console. Commands can be manually restricted to certain user groups using a [CAMI](https://github.com/glua/CAMI)-compliant admin mod.
 
-If you are looking for the command structure, you can find it [here](/framework/definitions/command).
+If you are looking for the command structure, you can find it [here](/definitions/command).
 
 ---
 
@@ -22,7 +22,7 @@ Creates a new command by registering it with the provided structure. This includ
 **Parameters:**  
     
 - `command` (`string`): Name of the command (recommended in UpperCamelCase).
-- `data` (`table`): Data describing the command, adhering to the [`Command Fields`](/framework/definitions/command).
+- `data` (`table`): Data describing the command, adhering to the [`Command Fields`](/definitions/command).
 
 **Usage Example:**
 ```lua
