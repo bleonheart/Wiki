@@ -439,3 +439,24 @@ CLASS.index = CLASS_STEVE
     *Assigns a unique team index to the class.*
 
 ---
+    
+#### 25. `CLASS.requirements` *(Optional)*
+
+- **Purpose:**  
+  A string describing the requirements to select the class.
+
+- **Type:**  
+  `String`
+
+- **Example:**
+    ```lua
+    CLASS.requirements = "Requires Level 10 and owning a sword."
+    ```
+    *Sets a descriptive requirement for the class.*
+
+    **Advanced Example:**
+    ```lua
+    CLASS.requirements = "Requires Level 15, owning an iron sword and shield, and membership in the Minecrafter faction."
+    ```
+    *Provides a detailed description of multiple requirements needed to select the class.*
+---
