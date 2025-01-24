@@ -1,9 +1,4 @@
 ---
-title: **Character Object Documentation**
-description: Comprehensive documentation for the Character object in the Lilia game framework.
----
-
-# **Character Object**
 
 Characters are a fundamental object type in Lilia. They are distinct from players, where players are the representation of a person's existence in the server that owns a character, and their character is their currently selected persona. All the characters that a player owns will be loaded into memory once they connect to the server. Characters are saved during a regular interval (`lia.config.CharacterDataSaveInterval`), and during specific events (e.g., when the owning player switches away from one character to another).
 
